@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "surface-container-low": "#eff4ff", "outline-variant": "#c5c5d3", "secondary-fixed-dim": "#ffb4ab", "tertiary-container": "#004b1f", "tertiary-fixed": "#95f8a7", "on-secondary": "#ffffff", "primary-fixed": "#dce1ff", "surface-variant": "#d3e4fe", "surface-container-highest": "#d3e4fe", "primary": "#00236f", "on-primary-container": "#90a8ff", "secondary-fixed": "#ffdad6", "on-surface-variant": "#444651", "on-tertiary-container": "#5ec074", "primary-container": "#1e3a8a", "primary-fixed-dim": "#b6c4ff", "surface-container-high": "#dce9ff", "inverse-primary": "#b6c4ff", "tertiary": "#003212", "on-secondary-fixed-variant": "#93000b", "on-secondary-fixed": "#410002", "inverse-on-surface": "#eaf1ff", "on-primary-fixed-variant": "#264191", "outline": "#757682", "on-background": "#0b1c30", "on-tertiary-fixed": "#00210a", "on-tertiary-fixed-variant": "#005323", "on-primary": "#ffffff", "inverse-surface": "#213145", "on-secondary-container": "#fffbff", "surface-tint": "#4059aa", "on-error": "#ffffff", "on-error-container": "#93000a", "secondary-container": "#e02928", "on-primary-fixed": "#00164e", "surface-dim": "#cbdbf5", "on-surface": "#0b1c30", "background": "#f8f9ff", "error": "#ba1a1a", "surface-bright": "#f8f9ff", "tertiary-fixed-dim": "#79db8d", "surface-container": "#e5eeff", "on-tertiary": "#ffffff", "surface": "#f8f9ff", "secondary": "#bb0112", "surface-container-lowest": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin-lg": "3rem", "space-sm": "0.5rem", "gutter-lg": "2rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-xl": "2rem", "space-md": "1rem", "margin": "1.5rem" }, "fontFamily": { "label-lg": ["Inter"], "label-sm": ["Inter"], "display-lg-mobile": ["Outfit"], "label-md": ["Inter"], "headline-xl": ["Outfit"], "body-md": ["Inter"], "headline-sm": ["Outfit"], "headline-md": ["Outfit"], "display-lg": ["Outfit"], "body-xl": ["Inter"], "body-lg": ["Inter"], "headline-xl-mobile": ["Outfit"] }, "fontSize": { "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-xl": ["20px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-[0_2px_4px_rgba(0,35,111,0.12)]"><span class="material-symbols-outlined text-[20px]">public</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary leading-none">Festive World</span><span class="px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm tracking-wide uppercase">B1 ESL</span></div><span class="font-label-sm text-label-sm text-on-surface-variant font-normal">US &amp; UK Traditions</span></div></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-margin pb-space-lg gap-space-lg">
+<!-- Seasonal Context & Title -->
+<section class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[14px]">ac_unit</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Season 1 / 4 • Winter</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+<span class="font-label-sm text-label-sm">RP &amp; GA Active</span>
+</div>
+</div>
+<div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-tight">
+        Winter Traditions: Warmth &amp; Gatherings
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+        Explore how holiday customs bring families together across both sides of the Atlantic.
+      </p>
+</div>
+<!-- Lexical Focus Tag Bar -->
+<div class="flex flex-col gap-1.5 mt-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">CEFR B1 Lexical Focus</span>
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 -mx-margin px-margin">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md shrink-0">Tradition</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md shrink-0">Reunion</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md shrink-0">Gathering</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md shrink-0">Carol</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md shrink-0">Feast</span>
+</div>
+</div>
+</section>
+<!-- Card 1: United States -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl shadow-md overflow-hidden">
+<!-- Card Hero Media -->
+<div class="relative w-full h-44 bg-cover bg-center" data-alt="Warm and festive American family living room decorated for Christmas with a large glowing pine tree, colorful wrapped gifts underneath, fireplace stockings hanging, cozy indoor lighting, warm golden tones with festive deep red and navy blue interior decor." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDRy41XLK3dd4QcF2GfNSYk6QWEJnR9dC1ZnFEq7TfW0nuKz4DLYgvRNzmen9l9fytobQInfq5_eIESbhQK2blXIrybKYXEhioAF4JJvib3BTVNwf0cs8-3PgHynWw1elu0rdnyhgvQ8ltdILzxM-VKfbImFSDkb4CV_UH3O_qCLdzST9M-un9cVjejk4ci21xwHLQ471fKgcvC9o9ktOXVyq0QIJZiF3Ww0gz-L5M')">
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/70 via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-sm">
+<span class="text-base leading-none">🇺🇸</span>
+<span class="font-label-md text-label-md text-primary font-bold">United States</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<div class="absolute bottom-3 left-3 text-on-secondary">
+<h2 class="font-headline-md text-headline-md leading-tight text-surface-container-lowest drop-shadow-sm">Christmas in America</h2>
+<span class="font-label-sm text-label-sm text-surface-variant">Dec 24th – 25th • Family Reunions</span>
+</div>
+<button aria-label="Listen to US Pronunciation" class="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 text-primary flex items-center justify-center shadow-md active:scale-95 transition-transform" onclick="playAccentAudio('us')">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+</button>
+</div>
+<!-- Core Customs List -->
+<div class="p-space-lg flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Core Holiday Customs</span>
+<div class="grid grid-cols-1 gap-2.5">
+<div class="flex items-center gap-space-sm p-2.5 rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">flight_takeoff</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Interstate Travel &amp; Reunions</span>
+<span class="font-body-md text-label-sm text-on-surface-variant">Families journey across states for Christmas Eve dinner.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-2.5 rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">fireplace</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Stockings by the Fireplace</span>
+<span class="font-body-md text-label-sm text-on-surface-variant">Hanging oversized socks for morning treats and knick-knacks.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-2.5 rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">cookie</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Milk &amp; Cookies for Santa</span>
+<span class="font-body-md text-label-sm text-on-surface-variant">A nighttime plate left with carrots for the reindeer.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-2.5 rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">light_mode</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Elaborate Lawn Lighting Displays</span>
+<span class="font-body-md text-label-sm text-on-surface-variant">Suburban neighborhoods transform into illuminated spectacles.</span>
+</div>
+</div>
+</div>
+<!-- B1 Language Box -->
+<div class="p-space-md rounded-xl bg-surface-container text-on-surface flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">school</span> B1 Language in Context
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm">GA Practice</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+          “American families often gather around the Christmas tree to open gifts on Christmas morning.”
+        </p>
+<div class="pt-1.5 flex items-center gap-space-xs text-label-sm font-label-sm">
+<span class="font-bold text-primary">Key Idiom:</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest text-on-surface shadow-sm">Stocking stuffer</span>
+<span class="text-on-surface-variant font-normal">— a small gift suited for a stocking.</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2: United Kingdom -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl shadow-md overflow-hidden">
+<!-- Card Hero Media -->
+<div class="relative w-full h-44 bg-cover bg-center" data-alt="Traditional British Christmas dining table celebration in a warm Victorian townhome with festive paper Christmas crackers, flaming Christmas pudding, roast feast, rich emerald green and berry red accents, warm ambient candlelight, joyful festive celebration." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBaWcrek0pXURSOPMZCFruwhBmqdi7este-ZHpRSkqlhHVDseA639lU8gA2tc2uJjbHQDOFltjP9RGM5Xr30832vNfc6udgOLQ3M1g3Zr5P8iwQ5PeETXGskWtWHl_ejpqpnOVCS3o-0qqKwkITtHfFV5iHtlNGxGZ5b_09FVidc8UzuRvvSCLX6uN6D8mGQXJTJHz1w4C5mH3UCeR59K6yxmloWiEJrglg0B8bNqY')">
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/70 via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-sm">
+<span class="text-base leading-none">🇬🇧</span>
+<span class="font-label-md text-label-md text-primary font-bold">United Kingdom</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+</div>
+<div class="absolute bottom-3 left-3 text-on-secondary">
+<h2 class="font-headline-md text-headline-md leading-tight text-surface-container-lowest drop-shadow-sm">Christmas &amp; Boxing Day</h2>
+<span class="font-label-sm text-label-sm text-surface-variant">Dec 25th – 26th • Royal Speech &amp; Matches</span>
+</div>
+<button aria-label="Listen to UK Pronunciation" class="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 text-primary flex items-center justify-center shadow-md active:scale-95 transition-transform" onclick="playAccentAudio('uk')">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+</button>
+</div>
+<!-- Core Customs List -->
+<div class="p-space-lg flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Core Holiday Customs</span>
+<div class="grid grid-cols-1 gap-2.5">
+<div class="flex items-center gap-space-sm p-2.5 rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">celebration</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Paper Christmas Crackers</span>
+<span class="font-body-md text-label-sm text-on-surface-variant">Pulling crackers for colorful paper crowns, small toys &amp; jokes.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-2.5 rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">bakery_dining</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Mince Pies &amp; Flaming Pudding</span>
+<span class="font-body-md text-label-sm text-on-surface-variant">Spiced fruit pastries and brandy-soaked boiled Christmas pudding.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-2.5 rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">tv</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">The King’s Christmas Broadcast</span>
+<span class="font-body-md text-label-sm text-on-surface-variant">The national speech watched together promptly at 3:00 PM.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-2.5 rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">sports_soccer</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Boxing Day (Dec 26th)</span>
+<span class="font-body-md text-label-sm text-on-surface-variant">Premier League football fixtures, family walks, and high-street sales.</span>
+</div>
+</div>
+</div>
+<!-- B1 Language Box -->
+<div class="p-space-md rounded-xl bg-surface-container text-on-surface flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">school</span> B1 Language in Context
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-label-sm">RP Practice</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+          “In the UK, wearing a paper crown from a Christmas cracker is a beloved dinner custom.”
+        </p>
+<div class="pt-1.5 flex items-center gap-space-xs text-label-sm font-label-sm">
+<span class="font-bold text-primary">Key Term:</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest text-on-surface shadow-sm">Boxing Day</span>
+<span class="text-on-surface-variant font-normal">— an official public bank holiday following Christmas.</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Interactive Activity: Compare & Speak Pair Activity -->
+<section class="flex flex-col bg-surface-container-low rounded-xl p-space-lg shadow-sm gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-tight">Compare &amp; Speak</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Classroom Pair Activity (B1 Dialogue)</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Speaking</span>
+</div>
+<!-- Venn-style Comparative Toggle Blocks -->
+<div class="flex flex-col gap-2">
+<!-- US Distinct -->
+<div class="p-3 rounded-lg bg-surface-container-lowest flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold flex items-center gap-1.5">
+<span>🇺🇸</span> US Distinct Features
+          </span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Morning unboxing focus</span>
+</div>
+<p class="font-body-md text-label-sm text-on-surface-variant">
+          Presents opened early Dec 25th in pajamas; focus on big breakfast casseroles and illuminated outdoor yards.
+        </p>
+</div>
+<!-- Shared Core -->
+<div class="p-3 rounded-lg bg-primary-fixed text-on-primary-fixed flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span> Shared Cultural Core
+          </span>
+<span class="text-label-sm font-label-sm opacity-90">Both nations</span>
+</div>
+<p class="font-body-md text-label-sm">
+          Family togetherness, giving gifts, roast turkey dinners, Christmas carols, and watching holiday films together.
+        </p>
+</div>
+<!-- UK Distinct -->
+<div class="p-3 rounded-lg bg-surface-container-lowest flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-tertiary font-bold flex items-center gap-1.5">
+<span>🇬🇧</span> UK Distinct Features
+          </span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Two-day celebration</span>
+</div>
+<p class="font-body-md text-label-sm text-on-surface-variant">
+          Wearing paper crowns at dinner, eating mince pies, festive royal broadcast, and second-day celebrations on Boxing Day.
+        </p>
+</div>
+</div>
+<!-- Prompt & Timer Box -->
+<div class="p-3.5 rounded-xl bg-surface-container-highest flex flex-col gap-3">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-primary font-bold">Pair Discussion Prompt</span>
+<p class="font-body-md text-body-md text-on-surface">
+          “Which winter celebration tradition would you prefer to experience in person: an American decorated neighborhood or a British Christmas dinner with crackers? Give two reasons.”
+        </p>
+</div>
+<!-- Timer Controls -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">timer</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold font-mono" id="timerDisplay">05:00</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm active:scale-95 transition-transform flex items-center gap-1.5" id="timerToggleBtn" onclick="toggleClassTimer()">
+<span class="material-symbols-outlined text-[16px]" id="timerIcon">play_arrow</span>
+<span id="timerBtnText">Start 5m</span>
+</button>
+<button aria-label="Reset timer" class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface-variant flex items-center justify-center shadow-sm active:scale-95 transition-transform" onclick="resetClassTimer()">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  let timerInterval = null;
+  let timeRemaining = 300; // 5 minutes in seconds
+  let isRunning = false;
+
+  function updateDisplay() {
+    const minutes = Math.floor(timeRemaining / 60);
+    const seconds = timeRemaining % 60;
+    const formatted = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    const display = document.getElementById('timerDisplay');
+    if (display) display.textContent = formatted;
+  }
+
+  function toggleClassTimer() {
+    const btnText = document.getElementById('timerBtnText');
+    const btnIcon = document.getElementById('timerIcon');
+
+    if (!isRunning) {
+      isRunning = true;
+      if (btnText) btnText.textContent = "Pause";
+      if (btnIcon) btnIcon.textContent = "pause";
+      timerInterval = setInterval(() => {
+        if (timeRemaining > 0) {
+          timeRemaining--;
+          updateDisplay();
+        } else {
+          clearInterval(timerInterval);
+          isRunning = false;
+          if (btnText) btnText.textContent = "Time Up!";
+          if (btnIcon) btnIcon.textContent = "done";
+        }
+      }, 1000);
+    } else {
+      isRunning = false;
+      clearInterval(timerInterval);
+      if (btnText) btnText.textContent = "Resume";
+      if (btnIcon) btnIcon.textContent = "play_arrow";
+    }
+  }
+
+  function resetClassTimer() {
+    clearInterval(timerInterval);
+    isRunning = false;
+    timeRemaining = 300;
+    updateDisplay();
+    const btnText = document.getElementById('timerBtnText');
+    const btnIcon = document.getElementById('timerIcon');
+    if (btnText) btnText.textContent = "Start 5m";
+    if (btnIcon) btnIcon.textContent = "play_arrow";
+  }
+
+  function playAccentAudio(locale) {
+    if ('speechSynthesis' in window) {
+      const sentence = locale === 'us'
+        ? "American families often gather around the Christmas tree to open gifts on Christmas morning."
+        : "In the United Kingdom, wearing a paper crown from a Christmas cracker is a beloved dinner custom.";
+      const utterance = new SpeechSynthesisUtterance(sentence);
+      utterance.lang = locale === 'us' ? 'en-US' : 'en-GB';
+      utterance.rate = 0.9;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(utterance);
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.05)]" data-active-classes="text-primary font-bold bg-surface-container-low"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 rounded-xl text-on-surface-variant transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">cottage</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 rounded-xl transition-colors text-primary font-bold bg-surface-container-low" data-path="winter-traditions" href="#"><span class="material-symbols-outlined text-[22px]">ac_unit</span><span class="font-label-sm text-label-sm mt-0.5">Winter</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 rounded-xl text-on-surface-variant transition-colors" data-path="spring-traditions" href="#"><span class="material-symbols-outlined text-[22px]">psychiatry</span><span class="font-label-sm text-label-sm mt-0.5">Spring</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 rounded-xl text-on-surface-variant transition-colors" data-path="summer-traditions" href="#"><span class="material-symbols-outlined text-[22px]">sunny</span><span class="font-label-sm text-label-sm mt-0.5">Summer</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 rounded-xl text-on-surface-variant transition-colors" data-path="autumn-traditions" href="#"><span class="material-symbols-outlined text-[22px]">eco</span><span class="font-label-sm text-label-sm mt-0.5">Autumn</span></a></div></nav></body></html>

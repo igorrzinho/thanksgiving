@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "surface-container-low": "#eff4ff", "outline-variant": "#c5c5d3", "secondary-fixed-dim": "#ffb4ab", "tertiary-container": "#004b1f", "tertiary-fixed": "#95f8a7", "on-secondary": "#ffffff", "primary-fixed": "#dce1ff", "surface-variant": "#d3e4fe", "surface-container-highest": "#d3e4fe", "primary": "#00236f", "on-primary-container": "#90a8ff", "secondary-fixed": "#ffdad6", "on-surface-variant": "#444651", "on-tertiary-container": "#5ec074", "primary-container": "#1e3a8a", "primary-fixed-dim": "#b6c4ff", "surface-container-high": "#dce9ff", "inverse-primary": "#b6c4ff", "tertiary": "#003212", "on-secondary-fixed-variant": "#93000b", "on-secondary-fixed": "#410002", "inverse-on-surface": "#eaf1ff", "on-primary-fixed-variant": "#264191", "outline": "#757682", "on-background": "#0b1c30", "on-tertiary-fixed": "#00210a", "on-tertiary-fixed-variant": "#005323", "on-primary": "#ffffff", "inverse-surface": "#213145", "on-secondary-container": "#fffbff", "surface-tint": "#4059aa", "on-error": "#ffffff", "on-error-container": "#93000a", "secondary-container": "#e02928", "on-primary-fixed": "#00164e", "surface-dim": "#cbdbf5", "on-surface": "#0b1c30", "background": "#f8f9ff", "error": "#ba1a1a", "surface-bright": "#f8f9ff", "tertiary-fixed-dim": "#79db8d", "surface-container": "#e5eeff", "on-tertiary": "#ffffff", "surface": "#f8f9ff", "secondary": "#bb0112", "surface-container-lowest": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin-lg": "3rem", "space-sm": "0.5rem", "gutter-lg": "2rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-xl": "2rem", "space-md": "1rem", "margin": "1.5rem" }, "fontFamily": { "label-lg": ["Inter"], "label-sm": ["Inter"], "display-lg-mobile": ["Outfit"], "label-md": ["Inter"], "headline-xl": ["Outfit"], "body-md": ["Inter"], "headline-sm": ["Outfit"], "headline-md": ["Outfit"], "display-lg": ["Outfit"], "body-xl": ["Inter"], "body-lg": ["Inter"], "headline-xl-mobile": ["Outfit"] }, "fontSize": { "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-xl": ["20px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-[0_2px_4px_rgba(0,35,111,0.12)]"><span class="material-symbols-outlined text-[20px]">public</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary leading-none">Festive World</span><span class="px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm tracking-wide uppercase">B1 ESL</span></div><span class="font-label-sm text-label-sm text-on-surface-variant font-normal">US &amp; UK Traditions</span></div></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Vocabulary Tooltip Floating Helper -->
+<div class="fixed inset-0 z-50 bg-on-background/40 backdrop-blur-sm hidden items-center justify-center p-space-md" id="vocab-modal">
+<div class="w-full max-w-xs bg-surface-container-lowest rounded-xl shadow-xl p-space-lg flex flex-col gap-space-sm transition-all transform scale-95 opacity-0 duration-200" id="vocab-card">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wide">CEFR B1 Lexicon</span>
+<button class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-primary" id="close-vocab-btn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<h4 class="font-headline-sm text-headline-sm text-primary" id="vocab-term">Term</h4>
+<span class="text-on-surface-variant font-label-md text-label-md font-normal italic" id="vocab-phonetic">/tɜːm/</span>
+</div>
+<p class="text-on-surface font-body-md text-body-md mt-1 leading-snug" id="vocab-def">Definition appears here.</p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low text-on-primary-fixed-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary-container">record_voice_over</span>
+<span class="font-label-sm text-label-sm font-semibold" id="vocab-region">Typical UK / US Tradition</span>
+</div>
+<button class="w-full py-2 bg-primary-container text-on-primary rounded-lg font-label-md text-label-md mt-1 text-center shadow-sm" id="dismiss-vocab-btn">Got it</button>
+</div>
+</div>
+<!-- Hero Module -->
+<section class="px-space-md pt-space-md pb-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-1.5 self-start px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm tracking-wide">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span>Interactive Classroom Study • US &amp; UK Culture</span>
+</div>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary leading-tight mt-1">
+        Celebrations &amp; Occasions: <span class="text-secondary">US vs UK</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Intermediate (CEFR B1) comparative study exploring transatlantic heritage, distinct vocabulary, and lively cultural rituals.
+      </p>
+</div>
+<!-- Quick CTAs -->
+<div class="flex items-center gap-space-sm pt-1">
+<a class="flex-1 py-3 px-4 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg text-center flex items-center justify-center gap-2 shadow-md active:scale-95 transition-transform" href="#season-cards">
+<span>Start Exploring</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<button class="py-3 px-4 rounded-lg bg-surface-container-high text-primary font-label-lg text-label-lg flex items-center justify-center gap-1.5 active:bg-surface-container-highest transition-colors" id="objectives-toggle">
+<span class="material-symbols-outlined text-[20px]">school</span>
+<span>B1 Objectives</span>
+</button>
+</div>
+<!-- Collapsible Objectives Drawer -->
+<div class="hidden flex-col gap-2 p-4 rounded-xl bg-surface-container-low text-on-surface shadow-sm" id="objectives-drawer">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[20px]">checklist</span>
+<span>Curriculum Milestones:</span>
+</div>
+<ul class="text-body-md font-body-md text-on-surface-variant flex flex-col gap-1.5 pl-5 list-disc">
+<li>Compare contrasts using linking words (<em class="text-primary">whereas, while, unlike</em>).</li>
+<li>Acquire festive cultural vocabulary specific to British &amp; American festivities.</li>
+<li>Express preference in oral paired dialogues using target discourse markers.</li>
+</ul>
+</div>
+<!-- Quick Stat Pill Strip -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">calendar_view_week</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary leading-none">4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Seasons</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">celebration</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-secondary leading-none">8</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Celebrations</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[20px]">spellcheck</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary leading-none">24+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lexicon Pills</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">forum</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary-container leading-none">Pair</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sparks &amp; Drills</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section Header -->
+<div class="px-space-md pb-space-sm pt-2 flex items-center justify-between" id="season-cards">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-5 rounded-full bg-secondary"></span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Curated Seasons</h2>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">CEFR B1 Modules</span>
+</div>
+<!-- Mobile Season Cards List -->
+<div class="flex flex-col gap-space-lg px-space-md pb-space-lg">
+<!-- 1. Winter Card -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl shadow-md overflow-hidden transition-all">
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A cozy British Christmas feast table with mince pies, glowing candles, colorful holiday crackers, and stockings hanging near a roaring warm fireplace, magazine style photography with deep navy and rich festive red ambient glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0PsTxnvlL5OfkI9MRAnLuGsDgMgJXddxjbDlJ1UeNoZ0jH9N194-LEtcrBFya7VxSSpLhzq6TB5BwUytFsRcuWJ1CcHSkF_4R3xIubkyNGK7fvxaJ3hxLSzAgKXVprv638h3Kc6S2s1MZkvv8z7mEfvPO2j7FkCsknCnNSOTU_v69fTTqkriDjF5v0wUo5mIPaXX1mYiQHPXwfbMI3qiQTW5Jy52_JIL-I4K_a18"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 flex gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span>🇺🇸 US</span>
+<span class="text-on-surface-variant font-normal">vs</span>
+<span>🇬🇧 UK</span>
+</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest/90 backdrop-blur-sm text-primary-container font-label-sm text-label-sm">
+            Dec - Jan
+          </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed">Winter Module 01</span>
+<h3 class="font-headline-sm text-headline-sm text-on-primary font-bold leading-tight">Christmas &amp; Boxing Day</h3>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          While American homes highlight Santa’s stockings and holiday tree lightings, the UK continues festive celebrations on Boxing Day with traditional sporting matches and hearty leftovers.
+        </p>
+<!-- Vocabulary Pills -->
+<div class="flex flex-col gap-1.5 pt-1">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Target Vocabulary (Tap word):</span>
+<div class="flex flex-wrap gap-2">
+<button class="vocab-btn px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 shadow-sm" data-def="A large sock hung by children on Christmas Eve for Santa Claus to fill with small presents and sweets." data-phonetic="/ˈstɒk.ɪŋz/" data-region="Common in US &amp; UK homes" data-term="Stockings">
+<span class="material-symbols-outlined text-[15px]">help_outline</span>
+<span>Stockings</span>
+</button>
+<button class="vocab-btn px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 shadow-sm" data-def="A cardboard paper tube wrapped in bright paper that makes a pop when pulled apart by two people, revealing a paper crown, joke, and novelty gift." data-phonetic="/ˈkræk.əz/" data-region="Essential UK Tradition" data-term="Christmas Crackers">
+<span class="material-symbols-outlined text-[15px]">help_outline</span>
+<span>Christmas Crackers</span>
+</button>
+<button class="vocab-btn px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 shadow-sm" data-def="A traditional British sweet pastry tart filled with mincemeat (dried fruits, spices, and suet), served warm during Christmas." data-phonetic="/mɪns paɪz/" data-region="Iconic UK Festive Delicacy" data-term="Mince Pies">
+<span class="material-symbols-outlined text-[15px]">help_outline</span>
+<span>Mince Pies</span>
+</button>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between">
+<div class="flex items-center gap-1 text-tertiary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Family &amp; Warmth</span>
+</div>
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-transform">
+<span>Explore Custom</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- 2. Spring Card -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl shadow-md overflow-hidden transition-all">
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A lush green Spring festival scene with dyed decorative Easter eggs nestled in fresh morning grass, green ribbons, shamrocks, and a lively sunny city parade celebration in the blurred background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUkadYLfW9ScWmPs1U5TW3PboGB28_S7S8EVWFuOQxVqtxjise2H-EzMOXmqDgVtXs3U0P9ep8osoIj0zPip1DFQDbOGjYaj6X9cv5oqyuFbt0mJiiRfHlmAFyMpiuf6taV7RzOAn_6hEMyQHdk3ZmVXQobcz1QyjGxVGe_HxQSp03TbH27Q7Rtj6r6HiID6MRgjGo670wNwyP9XDY2utxgvZzORuGiki2zBC7Nqs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 flex gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span>🇺🇸 US</span>
+<span class="text-on-surface-variant font-normal">&amp;</span>
+<span>🇬🇧 UK</span>
+</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest/90 backdrop-blur-sm text-primary-container font-label-sm text-label-sm">
+            March - April
+          </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed">Spring Module 02</span>
+<h3 class="font-headline-sm text-headline-sm text-on-primary font-bold leading-tight">St. Patrick's Day &amp; Easter</h3>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          From colossal green-river parades in Chicago and New York to tranquil Easter egg rolls in gardens across Britain, Spring celebrates heritage, rebirth, and community rituals.
+        </p>
+<!-- Vocabulary Pills -->
+<div class="flex flex-col gap-1.5 pt-1">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Target Vocabulary (Tap word):</span>
+<div class="flex flex-wrap gap-2">
+<button class="vocab-btn px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 shadow-sm" data-def="A large festive procession of brass bands, dancers, and elaborate floats marching down a main avenue in celebration." data-phonetic="/pəˈreɪd/" data-region="Famous in Boston, NY &amp; UK cities" data-term="Parade">
+<span class="material-symbols-outlined text-[15px]">help_outline</span>
+<span>Parade</span>
+</button>
+<button class="vocab-btn px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 shadow-sm" data-def="A clover plant with three leaves, used as an Irish national symbol worn proudly on St. Patrick's Day." data-phonetic="/ˈʃæm.rɒk/" data-region="Celtic Tradition &amp; Transatlantic symbol" data-term="Shamrock">
+<span class="material-symbols-outlined text-[15px]">help_outline</span>
+<span>Shamrock</span>
+</button>
+<button class="vocab-btn px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 shadow-sm" data-def="A game where children search across yards or parks to collect hidden hard-boiled or chocolate eggs." data-phonetic="/eɡ hʌnt/" data-region="Beloved by families in both US &amp; UK" data-term="Egg Hunt">
+<span class="material-symbols-outlined text-[15px]">help_outline</span>
+<span>Egg Hunt</span>
+</button>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between">
+<div class="flex items-center gap-1 text-tertiary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">nature_people</span>
+<span>Renewal &amp; Heritage</span>
+</div>
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-transform">
+<span>Explore Custom</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- 3. Summer Card -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl shadow-md overflow-hidden transition-all">
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Vibrant summer street celebration with Caribbean carnival masquerade performers in London with colorful feather headdresses, contrasted with American Fourth of July backyard cookout with burgers and sparklers under sunny sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9nqX5_vSeq4CMsZLtSxQecYVtAfnF8e1qUkDSedlU04RJeDGmli98yJf20s_rbyVrPIEYxwWyIhxGUoLwRjYh-XbgA6U-MClL7RWuX0JnXXbHzzDvDDaFt6h88yECGMCM6ZMs_xLFYfpKcyn9mqQNd_-hTzxeuysztaa5HjPiaP4RbY9uxeJPZwMGkOlxosPjQeu_oIh2oHsv9YZTD529bWNonwE9WrRb-ScrewQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 flex gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span>Festivals</span>
+<span class="text-on-surface-variant font-normal">&amp;</span>
+<span>Freedom</span>
+</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest/90 backdrop-blur-sm text-primary-container font-label-sm text-label-sm">
+            July - August
+          </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed">Summer Module 03</span>
+<h3 class="font-headline-sm text-headline-sm text-on-primary font-bold leading-tight">4th of July &amp; Notting Hill Carnival</h3>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Americans gather for Independence Day barbecues and firework spectacles, while London comes alive on August Bank Holiday with Europe's largest Caribbean street carnival.
+        </p>
+<!-- Vocabulary Pills -->
+<div class="flex flex-col gap-1.5 pt-1">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Target Vocabulary (Tap word):</span>
+<div class="flex flex-wrap gap-2">
+<button class="vocab-btn px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 shadow-sm" data-def="An outdoor social gathering where friends cook hamburgers, hot dogs, and steaks over an open grill." data-phonetic="/ˈkʊk.aʊt/" data-region="Key US Summer Word (UK: Barbecue)" data-term="Cookout">
+<span class="material-symbols-outlined text-[15px]">help_outline</span>
+<span>Cookout</span>
+</button>
+<button class="vocab-btn px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 shadow-sm" data-def="A lively street dance procession where performers wear glittering costumes, ornate masks, and elaborate feather plumage." data-phonetic="/ˌmæs.kəˈreɪd/" data-region="Notting Hill Carnival centerpiece" data-term="Masquerade">
+<span class="material-symbols-outlined text-[15px]">help_outline</span>
+<span>Masquerade</span>
+</button>
+<button class="vocab-btn px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 shadow-sm" data-def="Explosive pyrotechnic devices that shoot bright bursts of light and crackling noise into the night sky." data-phonetic="/ˈfaɪə.wɜːks/" data-region="Universal patriotic &amp; holiday feature" data-term="Fireworks">
+<span class="material-symbols-outlined text-[15px]">help_outline</span>
+<span>Fireworks</span>
+</button>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between">
+<div class="flex items-center gap-1 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">music_note</span>
+<span>Outdoor Jubilation</span>
+</div>
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-transform">
+<span>Explore Custom</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- 4. Autumn Card -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl shadow-md overflow-hidden transition-all">
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Warm autumn tableau featuring carved glowing pumpkin jack-o-lanterns, a lavish roast turkey dinner table with cranberry sauce, and a glowing outdoor UK bonfire night sparkler background with golden fallen leaves." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwR-af1bD51UpjO7g_ziz9-5GSolqxvUACYtecPS9PdIVmnbY8FDKCH5EdjajvmVxqKa2vm9l0eK9RnjZ6-k65v4W_eue_WblJmB7ksLN4yo9OeNCSWLA9qHw0hsGFt73PDbvkNxqF0IgtOeWFXZIwinvaYqZl2fxbIWwxe_E4hWYTvBTGVFbFsaNaOgj5bfxHuqzoAf4pMovM_ZWDitGMav9o3HlmAjTtlN39Fz0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 flex gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span>Harvest</span>
+<span class="text-on-surface-variant font-normal">&amp;</span>
+<span>Bonfires</span>
+</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest/90 backdrop-blur-sm text-primary-container font-label-sm text-label-sm">
+            Oct - Nov
+          </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed">Autumn Module 04</span>
+<h3 class="font-headline-sm text-headline-sm text-on-primary font-bold leading-tight">Halloween &amp; Guy Fawkes</h3>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          October trick-or-treating flows directly into November: Americans gather for Thanksgiving feasts while the UK builds towering community bonfires on the 5th of November.
+        </p>
+<!-- Vocabulary Pills -->
+<div class="flex flex-col gap-1.5 pt-1">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Target Vocabulary (Tap word):</span>
+<div class="flex flex-wrap gap-2">
+<button class="vocab-btn px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 shadow-sm" data-def="A hollowed-out pumpkin with a carved menacing or cheerful face, illuminated from within by a candle." data-phonetic="/ˌdʒæk.əˈlæn.tən/" data-region="Halloween staple in US &amp; UK" data-term="Jack-o'-lantern">
+<span class="material-symbols-outlined text-[15px]">help_outline</span>
+<span>Jack-o'-lantern</span>
+</button>
+<button class="vocab-btn px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 shadow-sm" data-def="A large, special, and bountiful meal served with abundance to celebrate an auspicious occasion or harvest." data-phonetic="/fiːst/" data-region="Thanksgiving dinner cornerstone" data-term="Feast">
+<span class="material-symbols-outlined text-[15px]">help_outline</span>
+<span>Feast</span>
+</button>
+<button class="vocab-btn px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 shadow-sm" data-def="A large controlled outdoor fire constructed to burn wood and an effigy (the 'Guy') during Guy Fawkes celebrations." data-phonetic="/ˈbɒn.faɪər/" data-region="British Bonfire Night tradition" data-term="Bonfire">
+<span class="material-symbols-outlined text-[15px]">help_outline</span>
+<span>Bonfire</span>
+</button>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between">
+<div class="flex items-center gap-1 text-tertiary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+<span>History &amp; Feasting</span>
+</div>
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-transform">
+<span>Explore Custom</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Mobile Discussion Spark Card -->
+<section class="px-space-md pb-space-xl">
+<div class="p-space-lg rounded-xl bg-surface-container-high shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">record_voice_over</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-tight">Discussion Spark</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Classroom Pair Drill</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase">Active Speaking</span>
+</div>
+<!-- Prompt Box -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wide">Teacher &amp; Student Prompt</span>
+<blockquote class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed italic">
+          “Which festival do you celebrate in your country, and which US or UK tradition would you like to experience in person?”
+        </blockquote>
+</div>
+<!-- Quick B1 Speech Starters -->
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">lightbulb</span>
+<span>B1 Sentence Starters (Tap to copy/practice):</span>
+</span>
+<div class="grid grid-cols-1 gap-2">
+<button class="speech-starter-btn flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest text-left shadow-sm active:bg-primary-fixed transition-colors" data-starter="In my view, our local harvest festival is more intimate than Thanksgiving, because...">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">1. “In my view...”</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Express personal opinion</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">content_copy</span>
+</button>
+<button class="speech-starter-btn flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest text-left shadow-sm active:bg-primary-fixed transition-colors" data-starter="Whereas in the UK families eat mince pies on Boxing Day, in my country we...">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">2. “Whereas...”</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Highlight clear contrast</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">content_copy</span>
+</button>
+<button class="speech-starter-btn flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest text-left shadow-sm active:bg-primary-fixed transition-colors" data-starter="I would rather attend the Notting Hill Carnival than Fourth of July fireworks, because I enjoy...">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">3. “I would rather...”</span>
+<span class="font-body-md text-body-md text-on-surface-variant">State cultural preference</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Feedback toast indicator -->
+<div class="hidden items-center justify-center p-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md text-center" id="speech-toast">
+        Copied speech starter to clipboard!
+      </div>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    // 1. Objectives drawer toggle
+    const toggleBtn = document.getElementById('objectives-toggle');
+    const drawer = document.getElementById('objectives-drawer');
+    if (toggleBtn && drawer) {
+      toggleBtn.addEventListener('click', () => {
+        const isHidden = drawer.classList.contains('hidden');
+        if (isHidden) {
+          drawer.classList.remove('hidden');
+          drawer.classList.add('flex');
+        } else {
+          drawer.classList.add('hidden');
+          drawer.classList.remove('flex');
+        }
+      });
+    }
+
+    // 2. Vocabulary pill modal interactive viewer
+    const modal = document.getElementById('vocab-modal');
+    const vocabCard = document.getElementById('vocab-card');
+    const termEl = document.getElementById('vocab-term');
+    const phoneticEl = document.getElementById('vocab-phonetic');
+    const defEl = document.getElementById('vocab-def');
+    const regionEl = document.getElementById('vocab-region');
+    const closeBtn = document.getElementById('close-vocab-btn');
+    const dismissBtn = document.getElementById('dismiss-vocab-btn');
+
+    function openVocab(term, phonetic, def, region) {
+      termEl.textContent = term;
+      phoneticEl.textContent = phonetic;
+      defEl.textContent = def;
+      regionEl.textContent = region;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      setTimeout(() => {
+        vocabCard.classList.remove('scale-95', 'opacity-0');
+        vocabCard.classList.add('scale-100', 'opacity-100');
+      }, 10);
+    }
+
+    function closeVocab() {
+      vocabCard.classList.remove('scale-100', 'opacity-100');
+      vocabCard.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }, 150);
+    }
+
+    document.querySelectorAll('.vocab-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const term = btn.getAttribute('data-term');
+        const phonetic = btn.getAttribute('data-phonetic');
+        const def = btn.getAttribute('data-def');
+        const region = btn.getAttribute('data-region');
+        openVocab(term, phonetic, def, region);
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeVocab);
+    if (dismissBtn) dismissBtn.addEventListener('click', closeVocab);
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeVocab();
+      });
+    }
+
+    // 3. Speech starter quick copy
+    const toast = document.getElementById('speech-toast');
+    document.querySelectorAll('.speech-starter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const text = btn.getAttribute('data-starter');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).catch(() => {});
+        }
+        if (toast) {
+          toast.classList.remove('hidden');
+          toast.classList.add('flex');
+          setTimeout(() => {
+            toast.classList.add('hidden');
+            toast.classList.remove('flex');
+          }, 2000);
+        }
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.05)]" data-active-classes="text-primary font-bold bg-surface-container-low"><div class="flex items-center justify-around h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 rounded-xl transition-colors text-primary font-bold bg-surface-container-low" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">cottage</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 rounded-xl text-on-surface-variant transition-colors" data-path="winter-traditions" href="#"><span class="material-symbols-outlined text-[22px]">ac_unit</span><span class="font-label-sm text-label-sm mt-0.5">Winter</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 rounded-xl text-on-surface-variant transition-colors" data-path="spring-traditions" href="#"><span class="material-symbols-outlined text-[22px]">psychiatry</span><span class="font-label-sm text-label-sm mt-0.5">Spring</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 rounded-xl text-on-surface-variant transition-colors" data-path="summer-traditions" href="#"><span class="material-symbols-outlined text-[22px]">sunny</span><span class="font-label-sm text-label-sm mt-0.5">Summer</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 rounded-xl text-on-surface-variant transition-colors" data-path="autumn-traditions" href="#"><span class="material-symbols-outlined text-[22px]">eco</span><span class="font-label-sm text-label-sm mt-0.5">Autumn</span></a></div></nav></body></html>

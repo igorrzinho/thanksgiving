@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" name="viewport"/>
+  <title>Festive World: US &amp; UK Traditions | American &amp; British Holidays</title>
+
+  <!-- Pre-render theme detection to prevent flash of wrong theme -->
+  <script>
+    (function () {
+      try {
+        const savedTheme = localStorage.getItem('festive_theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.classList.remove('light');
+        } else {
+          document.documentElement.classList.add('light');
+          document.documentElement.classList.remove('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts: Inter & Outfit & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <!-- Tailwind CSS via CDN with exact Design Tokens from DESIGN.md -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#00236f",
+            "on-primary": "#ffffff",
+            "primary-container": "#1e3a8a",
+            "on-primary-container": "#90a8ff",
+            "primary-fixed": "#dce1ff",
+            "primary-fixed-dim": "#b6c4ff",
+            "on-primary-fixed": "#00164e",
+            "on-primary-fixed-variant": "#264191",
+            "secondary": "#bb0112",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#e02928",
+            "on-secondary-container": "#fffbff",
+            "secondary-fixed": "#ffdad6",
+            "secondary-fixed-dim": "#ffb4ab",
+            "on-secondary-fixed": "#410002",
+            "on-secondary-fixed-variant": "#93000b",
+            "tertiary": "#003212",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#004b1f",
+            "on-tertiary-container": "#5ec074",
+            "tertiary-fixed": "#95f8a7",
+            "tertiary-fixed-dim": "#79db8d",
+            "on-tertiary-fixed": "#00210a",
+            "on-tertiary-fixed-variant": "#005323",
+            "surface": "#f8f9ff",
+            "on-surface": "#0b1c30",
+            "on-surface-variant": "#444651",
+            "surface-dim": "#cbdbf5",
+            "surface-bright": "#f8f9ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#eff4ff",
+            "surface-container": "#e5eeff",
+            "surface-container-high": "#dce9ff",
+            "surface-container-highest": "#d3e4fe",
+            "surface-variant": "#d3e4fe",
+            "surface-tint": "#4059aa",
+            "background": "#f8f9ff",
+            "on-background": "#0b1c30",
+            "inverse-surface": "#213145",
+            "inverse-on-surface": "#eaf1ff",
+            "inverse-primary": "#b6c4ff",
+            "outline": "#757682",
+            "outline-variant": "#c5c5d3",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-error-container": "#93000a"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "sm": "0.25rem",
+            "md": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "2xl": "1.5rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "gutter": "1.5rem",
+            "gutter-lg": "2rem",
+            "margin": "1.5rem",
+            "margin-lg": "3rem"
+          },
+          fontFamily: {
+            "headline-sm": ["Outfit", "sans-serif"],
+            "headline-md": ["Outfit", "sans-serif"],
+            "headline-xl": ["Outfit", "sans-serif"],
+            "headline-xl-mobile": ["Outfit", "sans-serif"],
+            "display-lg": ["Outfit", "sans-serif"],
+            "display-lg-mobile": ["Outfit", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-xl": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "label-lg": ["Inter", "sans-serif"]
+          },
+          fontSize: {
+            "headline-sm": ["22px", { lineHeight: "30px", letterSpacing: "0em", fontWeight: "600" }],
+            "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "headline-xl-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "display-lg": ["56px", { lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "body-md": ["16px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }],
+            "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "0em", fontWeight: "400" }],
+            "body-xl": ["20px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "700" }],
+            "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }],
+            "label-lg": ["15px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }]
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col antialiased selection:bg-primary-fixed selection:text-on-primary-fixed pb-20 md:pb-0">
+
+  <!-- ==================== HEADER (RESPONSIVE) ==================== -->
+  <header class="fixed top-0 w-full z-50 glass-header shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe">
+    <div class="h-16 md:h-20 max-w-7xl mx-auto px-margin lg:px-margin-lg flex items-center justify-between gap-space-md">
+      
+      <!-- Brand & Title -->
+      <a href="#home" data-path="home" class="flex items-center gap-space-sm group">
+        <div class="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-[0_2px_4px_rgba(0,35,111,0.15)] group-hover:bg-primary transition-colors">
+          <span class="material-symbols-outlined text-[20px] md:text-[22px]">public</span>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-space-xs">
+            <span class="font-headline-sm text-[18px] md:text-headline-sm text-primary leading-none tracking-tight">Festive World</span>
+          </div>
+          <span class="font-label-sm text-[11px] md:text-label-sm text-on-surface-variant font-normal">US &amp; UK Traditions</span>
+        </div>
+      </a>
+
+      <!-- Navigation & Dark Mode Toggle -->
+      <div class="flex items-center gap-space-sm">
+        <!-- Desktop Nav Tabs -->
+        <nav class="hidden md:flex items-center gap-1 bg-surface-container-low p-1.5 rounded-xl shadow-inner" id="desktop-nav">
+          <a class="desktop-nav-link px-space-md py-space-sm font-label-lg text-label-lg transition-colors bg-primary-container text-on-primary font-semibold rounded-lg shadow-sm" data-path="home" href="#home" aria-current="page">Home</a>
+          <a class="desktop-nav-link px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="winter" href="#winter">Winter</a>
+          <a class="desktop-nav-link px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="spring" href="#spring">Spring</a>
+          <a class="desktop-nav-link px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="summer" href="#summer">Summer</a>
+          <a class="desktop-nav-link px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="autumn" href="#autumn">Autumn</a>
+        </nav>
+
+        <!-- Dark Mode Toggle Button (Desktop & Mobile) -->
+        <button id="theme-toggle" class="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center justify-center transition-all shadow-xs border border-slate-200/60 active:scale-95 cursor-pointer" aria-label="Toggle dark mode" title="Alternar modo escuro">
+          <span class="material-symbols-outlined text-[20px] md:text-[22px] transition-transform duration-300" id="theme-toggle-icon">dark_mode</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT CONTAINER ==================== -->
+  <main class="w-full pt-16 md:pt-20 bg-surface flex-1">
+
+    <!-- ============================================================== -->
+    <!-- SECTION 1: HOME PAGE TAB (#home)                              -->
+    <!-- ============================================================== -->
+    <section id="tab-home" class="tab-content active w-full">
+      <div class="max-w-7xl mx-auto w-full px-margin lg:px-margin-lg py-space-lg md:py-space-xl flex flex-col gap-space-xl">
+        
+        <!-- Hero Module -->
+        <div class="flex flex-col gap-space-md bg-surface-container-lowest p-space-lg md:p-space-xl rounded-2xl shadow-sm border border-slate-100">
+          <div class="flex flex-col gap-space-xs max-w-3xl">
+            <div class="inline-flex items-center gap-1.5 self-start px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm tracking-wide">
+              <span class="w-2 h-2 rounded-full bg-secondary-container pulse-badge"></span>
+              <span>Cultural Traditions • US &amp; UK Holidays</span>
+            </div>
+            <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary leading-tight mt-1">
+              Celebrations &amp; Occasions: <span class="text-secondary">US vs UK</span>
+            </h1>
+            <p class="font-body-md md:font-body-xl text-body-md md:text-body-xl text-on-surface-variant leading-relaxed">
+              A comparative cultural guide exploring transatlantic heritage, festive traditions, and lively celebrations across the United States and the United Kingdom.
+            </p>
+          </div>
+
+          <!-- Quick CTAs -->
+          <div class="flex flex-wrap items-center gap-space-sm pt-1">
+            <a class="py-3 px-6 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg text-center flex items-center justify-center gap-2 shadow-md active:scale-95 hover:bg-primary-container transition-all" data-path="winter" href="#winter">
+              <span>Start Exploring</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+            <a class="py-3 px-5 rounded-lg bg-surface-container-high text-primary font-label-lg text-label-lg flex items-center justify-center gap-1.5 active:bg-surface-container-highest hover:bg-surface-container-highest transition-colors" href="#season-cards">
+              <span class="material-symbols-outlined text-[20px]">calendar_view_month</span>
+              <span>View All Seasons</span>
+            </a>
+          </div>
+
+          <!-- Quick Stat Pill Strip -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm pt-2">
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container shadow-xs">
+              <div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs">
+                <span class="material-symbols-outlined text-[22px]">calendar_view_week</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-headline-sm text-headline-sm text-primary leading-none">4</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Seasons</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container shadow-xs">
+              <div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary shadow-xs">
+                <span class="material-symbols-outlined text-[22px]">celebration</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-headline-sm text-headline-sm text-secondary leading-none">8</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Celebrations</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container shadow-xs">
+              <div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-tertiary-container shadow-xs">
+                <span class="material-symbols-outlined text-[22px]">flag</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-headline-sm text-headline-sm text-primary leading-none">2</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Nations (US &amp; UK)</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container shadow-xs">
+              <div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary-container shadow-xs">
+                <span class="material-symbols-outlined text-[22px]">auto_stories</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-headline-sm text-headline-sm text-primary-container leading-none">Rich</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Traditions &amp; Food</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Header -->
+        <div class="flex items-center justify-between pt-2" id="season-cards">
+          <div class="flex items-center gap-2">
+            <span class="w-1.5 h-6 rounded-full bg-secondary"></span>
+            <h2 class="font-headline-md text-headline-md text-primary">Curated Seasons</h2>
+          </div>
+          <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">Seasonal Guide</span>
+        </div>
+
+        <!-- 4 Curated Season Cards (Grid on Desktop, stacked on Mobile) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter lg:gap-gutter-lg">
+          
+          <!-- 1. Winter Card -->
+          <article class="flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md border border-slate-100 overflow-hidden transition-all duration-300">
+            <div class="relative w-full h-48 md:h-56 bg-surface-container overflow-hidden group">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Cozy Christmas table with mince pies and crackers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0PsTxnvlL5OfkI9MRAnLuGsDgMgJXddxjbDlJ1UeNoZ0jH9N194-LEtcrBFya7VxSSpLhzq6TB5BwUytFsRcuWJ1CcHSkF_4R3xIubkyNGK7fvxaJ3hxLSzAgKXVprv638h3Kc6S2s1MZkvv8z7mEfvPO2j7FkCsknCnNSOTU_v69fTTqkriDjF5v0wUo5mIPaXX1mYiQHPXwfbMI3qiQTW5Jy52_JIL-I4K_a18"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 flex gap-1.5">
+                <span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm font-semibold">
+                  <span>🇺🇸 US</span>
+                  <span class="text-on-surface-variant font-normal">vs</span>
+                  <span>🇬🇧 UK</span>
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-surface-container-highest/90 backdrop-blur-sm text-primary-container font-label-sm text-label-sm font-bold">
+                  Dec - Jan
+                </span>
+              </div>
+              <div class="absolute bottom-3 left-3 right-3 text-on-primary">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed">Winter Module 01</span>
+                <h3 class="font-headline-sm text-headline-sm text-on-primary font-bold leading-tight">Christmas &amp; Boxing Day</h3>
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                While American homes highlight Santa’s stockings and holiday tree lightings, the UK continues festive celebrations on Boxing Day with traditional sporting matches and hearty leftovers.
+              </p>
+              <!-- Festive Tradition Emblems -->
+              <div class="flex flex-col gap-1.5 pt-1">
+                <span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider font-semibold">Key Festive Symbols (Tap for cultural lore):</span>
+                <div class="flex flex-wrap gap-2">
+                  <button class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 hover:bg-amber-200 transition-colors shadow-xs" onclick="showDefinition('Stockings', 'American Holiday Custom', 'US Christmas Eve Tradition', 'A beloved tradition where decorative knit socks are hung above the hearth on Christmas Eve, ready for Santa Claus to fill with small toys, fruit, and sweets.')">
+                    <span class="material-symbols-outlined text-[15px]">celebration</span>
+                    <span>Stockings</span>
+                  </button>
+                  <button class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 hover:bg-amber-200 transition-colors shadow-xs" onclick="showDefinition('Christmas Crackers', 'British Holiday Custom', 'UK Dining Table Ritual', 'A quintessential British table ritual: two people pull a brightly wrapped cardboard tube until it snaps with a pop, releasing festive paper crowns, classic riddles, and small gifts.')">
+                    <span class="material-symbols-outlined text-[15px]">celebration</span>
+                    <span>Christmas Crackers</span>
+                  </button>
+                  <button class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 hover:bg-amber-200 transition-colors shadow-xs" onclick="showDefinition('Mince Pies', 'British Culinary Tradition', 'Historic Spiced Festive Tart', 'A historic British festive treat filled with mincemeat (spiced dried fruits, citrus peel, and spices), traditionally enjoyed warm with clotted cream throughout December.')">
+                    <span class="material-symbols-outlined text-[15px]">bakery_dining</span>
+                    <span>Mince Pies</span>
+                  </button>
+                </div>
+              </div>
+              <div class="pt-2 flex items-center justify-between border-t border-slate-100">
+                <div class="flex items-center gap-1 text-tertiary-container font-label-md text-label-md font-semibold">
+                  <span class="material-symbols-outlined text-[18px]">verified</span>
+                  <span>Family &amp; Warmth</span>
+                </div>
+                <a class="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-all shadow-xs" data-path="winter" href="#winter">
+                  <span>Explore Custom</span>
+                  <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Spring Card -->
+          <article class="flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md border border-slate-100 overflow-hidden transition-all duration-300">
+            <div class="relative w-full h-48 md:h-56 bg-surface-container overflow-hidden group">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Green Spring festival scene with dyed Easter eggs and shamrocks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUkadYLfW9ScWmPs1U5TW3PboGB28_S7S8EVWFuOQxVqtxjise2H-EzMOXmqDgVtXs3U0P9ep8osoIj0zPip1DFQDbOGjYaj6X9cv5oqyuFbt0mJiiRfHlmAFyMpiuf6taV7RzOAn_6hEMyQHdk3ZmVXQobcz1QyjGxVGe_HxQSp03TbH27Q7Rtj6r6HiID6MRgjGo670wNwyP9XDY2utxgvZzORuGiki2zBC7Nqs"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 flex gap-1.5">
+                <span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm font-semibold">
+                  <span>🇺🇸 US</span>
+                  <span class="text-on-surface-variant font-normal">&amp;</span>
+                  <span>🇬🇧 UK</span>
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-surface-container-highest/90 backdrop-blur-sm text-primary-container font-label-sm text-label-sm font-bold">
+                  March - April
+                </span>
+              </div>
+              <div class="absolute bottom-3 left-3 right-3 text-on-primary">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed">Spring Module 02</span>
+                <h3 class="font-headline-sm text-headline-sm text-on-primary font-bold leading-tight">St. Patrick's Day &amp; Easter</h3>
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                From colossal green-river parades in Chicago and New York to tranquil Easter egg rolls in gardens across Britain, Spring celebrates heritage, rebirth, and community rituals.
+              </p>
+              <div class="flex flex-col gap-1.5 pt-1">
+                <span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider font-semibold">Key Festive Symbols (Tap for cultural lore):</span>
+                <div class="flex flex-wrap gap-2">
+                  <button class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 hover:bg-amber-200 transition-colors shadow-xs" onclick="showDefinition('Parade', 'US Civic Celebration', 'St. Patrick\'s Day Spectacle', 'Massive street processions in NYC and Boston where hundreds of thousands line avenues to watch bagpipers, marching bands, and cultural floats celebrate Irish heritage.')">
+                    <span class="material-symbols-outlined text-[15px]">celebration</span>
+                    <span>Parade</span>
+                  </button>
+                  <button class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 hover:bg-amber-200 transition-colors shadow-xs" onclick="showDefinition('Shamrock', 'Celtic Folklore Emblem', 'National Irish Symbol', 'A three-leaf clover steeped in Celtic folklore; St. Patrick used it to symbolize the Trinity, and today it is pinned to lapels across America and the UK for luck.')">
+                    <span class="material-symbols-outlined text-[15px]">eco</span>
+                    <span>Shamrock</span>
+                  </button>
+                  <button class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 hover:bg-amber-200 transition-colors shadow-xs" onclick="showDefinition('Egg Hunt', 'Shared Anglo-American Tradition', 'Springtime Rebirth Ritual', 'An outdoor celebration where children race through blooming gardens to find hidden dyed or chocolate eggs, an ancient tradition symbolizing spring renewal.')">
+                    <span class="material-symbols-outlined text-[15px]">egg</span>
+                    <span>Egg Hunt</span>
+                  </button>
+                </div>
+              </div>
+              <div class="pt-2 flex items-center justify-between border-t border-slate-100">
+                <div class="flex items-center gap-1 text-tertiary-container font-label-md text-label-md font-semibold">
+                  <span class="material-symbols-outlined text-[18px]">nature_people</span>
+                  <span>Renewal &amp; Heritage</span>
+                </div>
+                <a class="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-all shadow-xs" data-path="spring" href="#spring">
+                  <span>Explore Custom</span>
+                  <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Summer Card -->
+          <article class="flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md border border-slate-100 overflow-hidden transition-all duration-300">
+            <div class="relative w-full h-48 md:h-56 bg-surface-container overflow-hidden group">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Summer street carnival and 4th of July cookout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9nqX5_vSeq4CMsZLtSxQecYVtAfnF8e1qUkDSedlU04RJeDGmli98yJf20s_rbyVrPIEYxwWyIhxGUoLwRjYh-XbgA6U-MClL7RWuX0JnXXbHzzDvDDaFt6h88yECGMCM6ZMs_xLFYfpKcyn9mqQNd_-hTzxeuysztaa5HjPiaP4RbY9uxeJPZwMGkOlxosPjQeu_oIh2oHsv9YZTD529bWNonwE9WrRb-ScrewQ"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 flex gap-1.5">
+                <span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm font-semibold">
+                  <span>Festivals</span>
+                  <span class="text-on-surface-variant font-normal">&amp;</span>
+                  <span>Freedom</span>
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-surface-container-highest/90 backdrop-blur-sm text-primary-container font-label-sm text-label-sm font-bold">
+                  July - August
+                </span>
+              </div>
+              <div class="absolute bottom-3 left-3 right-3 text-on-primary">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed">Summer Module 03</span>
+                <h3 class="font-headline-sm text-headline-sm text-on-primary font-bold leading-tight">4th of July &amp; Notting Hill Carnival</h3>
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Americans gather for Independence Day barbecues and firework spectacles, while London comes alive on August Bank Holiday with Europe's largest Caribbean street carnival.
+              </p>
+              <div class="flex flex-col gap-1.5 pt-1">
+                <span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider font-semibold">Key Festive Symbols (Tap for cultural lore):</span>
+                <div class="flex flex-wrap gap-2">
+                  <button class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 hover:bg-amber-200 transition-colors shadow-xs" onclick="showDefinition('Cookout', 'American Summer Custom', '4th of July Backyard Gathering', 'The heart of American Independence Day: neighbors gather in backyards and parks to grill burgers, ribs, and corn on the cob while dressed in patriotic colors.')">
+                    <span class="material-symbols-outlined text-[15px]">outdoor_grill</span>
+                    <span>Cookout</span>
+                  </button>
+                  <button class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 hover:bg-amber-200 transition-colors shadow-xs" onclick="showDefinition('Masquerade (\'Mas\')', 'British Caribbean Celebration', 'Notting Hill Carnival Tradition', 'The dazzling centerpiece of London\'s Notting Hill Carnival: costumed masquerade bands parade through West London with towering iridescent feathers, jewels, and soca beats.')">
+                    <span class="material-symbols-outlined text-[15px]">theater_comedy</span>
+                    <span>Masquerade</span>
+                  </button>
+                  <button class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 hover:bg-amber-200 transition-colors shadow-xs" onclick="showDefinition('Fireworks', 'American Patriotic Spectacle', 'Independence Night Tradition', 'A tradition starting in 1777 on the first anniversary of American independence; millions watch synchronized fireworks in town centers and on the National Mall in Washington D.C.')">
+                    <span class="material-symbols-outlined text-[15px]">flare</span>
+                    <span>Fireworks</span>
+                  </button>
+                </div>
+              </div>
+              <div class="pt-2 flex items-center justify-between border-t border-slate-100">
+                <div class="flex items-center gap-1 text-secondary font-label-md text-label-md font-semibold">
+                  <span class="material-symbols-outlined text-[18px]">music_note</span>
+                  <span>Outdoor Jubilation</span>
+                </div>
+                <a class="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-all shadow-xs" data-path="summer" href="#summer">
+                  <span>Explore Custom</span>
+                  <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Autumn Card -->
+          <article class="flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md border border-slate-100 overflow-hidden transition-all duration-300">
+            <div class="relative w-full h-48 md:h-56 bg-surface-container overflow-hidden group">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Autumn table with carved pumpkins, roast turkey, and bonfire sparklers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwR-af1bD51UpjO7g_ziz9-5GSolqxvUACYtecPS9PdIVmnbY8FDKCH5EdjajvmVxqKa2vm9l0eK9RnjZ6-k65v4W_eue_WblJmB7ksLN4yo9OeNCSWLA9qHw0hsGFt73PDbvkNxqF0IgtOeWFXZIwinvaYqZl2fxbIWwxe_E4hWYTvBTGVFbFsaNaOgj5bfxHuqzoAf4pMovM_ZWDitGMav9o3HlmAjTtlN39Fz0"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 flex gap-1.5">
+                <span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm font-semibold">
+                  <span>Harvest</span>
+                  <span class="text-on-surface-variant font-normal">&amp;</span>
+                  <span>Bonfires</span>
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-surface-container-highest/90 backdrop-blur-sm text-primary-container font-label-sm text-label-sm font-bold">
+                  Oct - Nov
+                </span>
+              </div>
+              <div class="absolute bottom-3 left-3 right-3 text-on-primary">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed">Autumn Module 04</span>
+                <h3 class="font-headline-sm text-headline-sm text-on-primary font-bold leading-tight">Halloween, Thanksgiving &amp; Guy Fawkes</h3>
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                October trick-or-treating flows directly into November: Americans gather for Thanksgiving feasts while the UK builds towering community bonfires on the 5th of November.
+              </p>
+              <div class="flex flex-col gap-1.5 pt-1">
+                <span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider font-semibold">Key Festive Symbols (Tap for cultural lore):</span>
+                <div class="flex flex-wrap gap-2">
+                  <button class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 hover:bg-amber-200 transition-colors shadow-xs" onclick="showDefinition('Jack-o\'-lantern', 'Ancient Celtic & American Folklore', 'Halloween Pumpkin Tradition', 'Derived from the Irish folk tale of Stingy Jack, immigrants in America hollowed native pumpkins to carve glowing faces that ward off wandering spirits on All Hallows\' Eve.')">
+                    <span class="material-symbols-outlined text-[15px]">pest_control</span>
+                    <span>Jack-o'-lantern</span>
+                  </button>
+                  <button class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 hover:bg-amber-200 transition-colors shadow-xs" onclick="showDefinition('Thanksgiving Feast', 'American Harvest Tradition', 'The National Gathering Meal', 'A grand harvest banquet originating with the 1621 Plymouth harvest; families reunite over roast turkey, stuffing, cranberry sauce, and pumpkin pie to express gratitude.')">
+                    <span class="material-symbols-outlined text-[15px]">restaurant</span>
+                    <span>Thanksgiving Feast</span>
+                  </button>
+                  <button class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md flex items-center gap-1 active:bg-amber-200 hover:bg-amber-200 transition-colors shadow-xs" onclick="showDefinition('Bonfire Night', 'British Historical Celebration', 'Guy Fawkes Night (Nov 5th)', 'Commemorating the failure of the 1605 Gunpowder Plot to blow up Parliament; communities build enormous pyres, burn the straw \'Guy\' effigy, and eat ginger parkin cake.')">
+                    <span class="material-symbols-outlined text-[15px]">local_fire_department</span>
+                    <span>Bonfire Night</span>
+                  </button>
+                </div>
+              </div>
+              <div class="pt-2 flex items-center justify-between border-t border-slate-100">
+                <div class="flex items-center gap-1 text-tertiary-container font-label-md text-label-md font-semibold">
+                  <span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+                  <span>History &amp; Feasting</span>
+                </div>
+                <a class="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-all shadow-xs" data-path="autumn" href="#autumn">
+                  <span>Explore Custom</span>
+                  <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================== -->
+    <!-- SECTION 2: WINTER TRADITIONS TAB (#winter)                     -->
+    <!-- ============================================================== -->
+    <section id="tab-winter" class="tab-content w-full">
+      <div class="relative w-full overflow-hidden bg-surface-container-low py-space-lg md:py-space-xl px-margin lg:px-margin-lg">
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-secondary-fixed/30 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto flex flex-col gap-space-md">
+          <div class="flex flex-wrap items-center justify-between gap-space-sm">
+            <div class="flex items-center gap-space-xs">
+              <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest bg-primary-fixed px-3 py-1 rounded-full font-bold">Season 1 / 4</span>
+              <span class="text-outline-variant">•</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Winter Traditions</span>
+            </div>
+            <div class="flex items-center gap-space-sm bg-surface-container px-3 py-1 rounded-full">
+              <span class="material-symbols-outlined text-primary text-[16px]">travel_explore</span>
+              <span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wide">Comparative Guide: US &amp; UK</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+            <div class="max-w-3xl">
+              <h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">Winter Traditions: Warmth &amp; Family Gatherings</h1>
+              <p class="font-body-xl text-body-xl text-on-surface-variant mt-space-xs">Examine how families celebrate the end of December in the United States and the United Kingdom through food, customs, and civic rituals.</p>
+            </div>
+          </div>
+
+          <!-- Festive Customs & Cultural Lore Ribbon -->
+          <div class="mt-space-sm bg-surface-container-lowest p-space-md rounded-xl shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-sm">
+              <div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary shrink-0">
+                <span class="material-symbols-outlined text-[18px]">celebration</span>
+              </div>
+              <div>
+                <div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Festive Customs &amp; Cultural Lore</div>
+                <div class="font-label-md text-label-md text-primary font-bold">Click any iconic festive emblem to explore its holiday tradition</div>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-space-xs">
+              <button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary transition-all font-label-md text-label-md flex items-center gap-1.5" onclick="showDefinition('Stockings &amp; Hearth', 'American Holiday Custom', 'US Christmas Eve Tradition', 'Rooted in the folklore of Saint Nicholas, children hang personalized knit stockings above the fireplace on Christmas Eve, awaiting morning surprises.')">
+                <span>Stockings</span>
+                <span class="material-symbols-outlined text-[14px]">info</span>
+              </button>
+              <button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary transition-all font-label-md text-label-md flex items-center gap-1.5" onclick="showDefinition('Christmas Crackers', 'British Holiday Custom', 'UK Dining Table Ritual', 'Invented in 1847 by London confectioner Tom Smith, these paper tubes snap with a loud pop when pulled, revealing a tissue crown, joke, and gift.')">
+                <span>Crackers</span>
+                <span class="material-symbols-outlined text-[14px]">info</span>
+              </button>
+              <button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary transition-all font-label-md text-label-md flex items-center gap-1.5" onclick="showDefinition('Mince Pies &amp; Pudding', 'British Culinary Tradition', 'Spiced Festive Treats', 'Sweet pastry tarts filled with spiced fruits and peel, followed by dense steamed pudding set alight with warmed brandy at table service.')">
+                <span>Mince Pies</span>
+                <span class="material-symbols-outlined text-[14px]">info</span>
+              </button>
+              <button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary transition-all font-label-md text-label-md flex items-center gap-1.5" onclick="showDefinition('The King\'s Speech', 'British Civic Tradition', 'Commonwealth Broadcast', 'Initiated in 1932 by King George V, the British monarch\'s reflective 3:00 PM Christmas Day address is watched by millions across the UK.')">
+                <span>King's Speech</span>
+                <span class="material-symbols-outlined text-[14px]">info</span>
+              </button>
+              <button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary transition-all font-label-md text-label-md flex items-center gap-1.5" onclick="showDefinition('Boxing Day (Dec 26th)', 'Statutory Public Holiday', 'UK &amp; Commonwealth Tradition', 'Originally a day when servants received \'Christmas boxes\' and wages from employers; today celebrated with Premier League football matches and country walks.')">
+                <span>Boxing Day</span>
+                <span class="material-symbols-outlined text-[14px]">info</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Comparison Grid -->
+      <div class="max-w-7xl mx-auto w-full px-margin lg:px-margin-lg py-space-xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter lg:gap-gutter-lg items-start">
+          
+          <!-- US Winter Card -->
+          <div class="flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm border border-slate-100 overflow-hidden group">
+            <div class="relative h-64 w-full overflow-hidden">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="American Christmas living room fireplace with stockings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHYoemMo6JBQ0uPEF-6zrPcRpGySM5iZfnG73rbSemF0i4fH7Lmc-E3YD2box3TB_ekPYxe-WrJ5KSBwtOU7YBOGfnf28TUVh4ESESXsWh2IeTUvBx9UE3X1-gBTssKm9MEDlALcJV1HPjZu-cJscCp7L4DYyzNBNBVt6F95xrKvkPodhUb_HE2GcSx63co58QAW3td2EveL00UUmtZFx3VQA1njl2UkdwKwBpXC4"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 flex items-center gap-2 bg-surface-container-lowest/95 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm">
+                <span class="text-base">🇺🇸</span>
+                <span class="font-label-md text-label-md text-primary font-bold">United States</span>
+                <span class="w-2 h-2 rounded-full bg-secondary"></span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between text-on-primary">
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-container-highest">Calendar Window</span>
+                  <h2 class="font-headline-md text-headline-md font-bold">Christmas in America</h2>
+                </div>
+                <div class="bg-primary/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-right">
+                  <span class="font-label-sm text-label-sm block opacity-80">Dates</span>
+                  <span class="font-label-md text-label-md font-bold">Dec 24th – 25th</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-space-lg flex flex-col gap-space-lg">
+              <div class="flex flex-col gap-space-md">
+                <div class="flex items-center justify-between pb-space-xs">
+                  <span class="font-label-lg text-label-lg font-bold text-on-surface">Core Cultural Customs</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">4 Essential Practices</span>
+                </div>
+                <div class="space-y-space-sm">
+                  <div class="bg-surface-container-low p-space-md rounded-xl flex gap-space-md items-start hover:bg-surface-container transition-colors">
+                    <div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-sm text-primary font-bold font-label-md">1</div>
+                    <div class="flex flex-col gap-1 min-w-0">
+                      <div class="flex items-center gap-2">
+                        <span class="font-label-lg text-label-lg font-bold text-primary">Family Reunions &amp; Interstate Travel</span>
+                      </div>
+                      <p class="font-body-md text-body-md text-on-surface">Millions travel extensive distances across multiple states via road trips and bustling airports to celebrate in multi-generational family homes.</p>
+                    </div>
+                  </div>
+                  <div class="bg-surface-container-low p-space-md rounded-xl flex gap-space-md items-start hover:bg-surface-container transition-colors">
+                    <div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-sm text-primary font-bold font-label-md">2</div>
+                    <div class="flex flex-col gap-1 min-w-0">
+                      <div class="flex items-center gap-2">
+                        <span class="font-label-lg text-label-lg font-bold text-primary">Stockings by the Fireplace</span>
+                      </div>
+                      <p class="font-body-md text-body-md text-on-surface">Hanging felt knit stockings above the fireplace mantle on Christmas Eve, ready to be stuffed with pocket toys, candy canes, and festive knick-knacks.</p>
+                    </div>
+                  </div>
+                  <div class="bg-surface-container-low p-space-md rounded-xl flex gap-space-md items-start hover:bg-surface-container transition-colors">
+                    <div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-sm text-primary font-bold font-label-md">3</div>
+                    <div class="flex flex-col gap-1 min-w-0">
+                      <div class="flex items-center gap-2">
+                        <span class="font-label-lg text-label-lg font-bold text-primary">Milk &amp; Cookies for Santa</span>
+                      </div>
+                      <p class="font-body-md text-body-md text-on-surface">Young children thoughtfully set out a plate of freshly baked chocolate-chip cookies and cold milk—alongside carrots for the reindeer—before bedtime.</p>
+                    </div>
+                  </div>
+                  <div class="bg-surface-container-low p-space-md rounded-xl flex gap-space-md items-start hover:bg-surface-container transition-colors">
+                    <div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-sm text-primary font-bold font-label-md">4</div>
+                    <div class="flex flex-col gap-1 min-w-0">
+                      <div class="flex items-center gap-2">
+                        <span class="font-label-lg text-label-lg font-bold text-primary">Exterior Holiday Lights &amp; Lawn Displays</span>
+                      </div>
+                      <p class="font-body-md text-body-md text-on-surface">Entire neighborhoods decorate rooftops and gardens with thousands of colorful synchronized lights, animated reindeer, and giant inflatable characters.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-sm">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-secondary text-[20px]">auto_stories</span>
+                    <span class="font-label-md text-label-md font-bold text-on-surface">Tradition Spotlight &amp; Folklore</span>
+                  </div>
+                  <span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-semibold">American Custom</span>
+                </div>
+                <div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-2 shadow-xs">
+                  <span class="font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant font-bold">Living Tradition</span>
+                  <p class="font-body-md text-body-md text-on-surface italic">"In American homes, Christmas morning centers on gathering around the tree in festive pajamas, unwrapping presents, and sharing homemade breakfast treats."</p>
+                </div>
+                <div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-1 shadow-xs">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant font-bold">Iconic American Custom</span>
+                    <span class="font-label-sm text-label-sm text-secondary font-bold">Holiday Symbol</span>
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface font-semibold text-primary">The "Stocking Stuffer" Custom</p>
+                  <p class="font-body-md text-body-md text-on-surface-variant">Rooted in folklore of Saint Nicholas tossing gold into hung socks; today, children wake to find knit stockings stuffed with miniature gifts, oranges, and candies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- UK Winter Card -->
+          <div class="flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm border border-slate-100 overflow-hidden group">
+            <div class="relative h-64 w-full overflow-hidden">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="British Christmas dinner table with crackers and mince pies" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6xMAK0lIHW8TSosdaIxlJ9WL7Yo0hhpzRbKp91wIDJ1_UooYNGrjyMJ3VzsuiBkEk_gsF4aisyYehh3LlqULYp5nQxRnkYWa1qepFii_JZ-knIcDdi5OLvEM5zi2pJsjxzluS2YJ-F3Un1Wm_Ns1OZliBf4_I4RiT14oQ1BcPAmrDJxNtjOcOJ_4tN-WXvtW9Sn9cOjZ3uxPdM8Teo79cPkpkUifFwwd-fy0mPm0"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 flex items-center gap-2 bg-surface-container-lowest/95 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm">
+                <span class="text-base">🇬🇧</span>
+                <span class="font-label-md text-label-md text-primary font-bold">United Kingdom</span>
+                <span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between text-on-primary">
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-container-highest">Calendar Window</span>
+                  <h2 class="font-headline-md text-headline-md font-bold">Christmas &amp; Boxing Day</h2>
+                </div>
+                <div class="bg-primary-container/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-right">
+                  <span class="font-label-sm text-label-sm block opacity-80">Dates</span>
+                  <span class="font-label-md text-label-md font-bold">Dec 25th – 26th</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-space-lg flex flex-col gap-space-lg">
+              <div class="flex flex-col gap-space-md">
+                <div class="flex items-center justify-between pb-space-xs">
+                  <span class="font-label-lg text-label-lg font-bold text-on-surface">Core Cultural Customs</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">4 Essential Practices</span>
+                </div>
+                <div class="space-y-space-sm">
+                  <div class="bg-surface-container-low p-space-md rounded-xl flex gap-space-md items-start hover:bg-surface-container transition-colors">
+                    <div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-sm text-primary font-bold font-label-md">1</div>
+                    <div class="flex flex-col gap-1 min-w-0">
+                      <div class="flex items-center gap-2">
+                        <span class="font-label-lg text-label-lg font-bold text-primary">Paper Christmas Crackers</span>
+                      </div>
+                      <p class="font-body-md text-body-md text-on-surface">Pulled in pairs at the Christmas dining table; with a sudden crack, they release a colorful tissue paper crown, an amusing novelty toy, and a classic pun riddle.</p>
+                    </div>
+                  </div>
+                  <div class="bg-surface-container-low p-space-md rounded-xl flex gap-space-md items-start hover:bg-surface-container transition-colors">
+                    <div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-sm text-primary font-bold font-label-md">2</div>
+                    <div class="flex flex-col gap-1 min-w-0">
+                      <div class="flex items-center gap-2">
+                        <span class="font-label-lg text-label-lg font-bold text-primary">Mince Pies &amp; Flaming Pudding</span>
+                      </div>
+                      <p class="font-body-md text-body-md text-on-surface">Indulging in sweet mincemeat pastries spiced with dried fruits, followed by dense steamed Christmas pudding ignited with heated brandy at table service.</p>
+                    </div>
+                  </div>
+                  <div class="bg-surface-container-low p-space-md rounded-xl flex gap-space-md items-start hover:bg-surface-container transition-colors">
+                    <div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-sm text-primary font-bold font-label-md">3</div>
+                    <div class="flex flex-col gap-1 min-w-0">
+                      <div class="flex items-center gap-2">
+                        <span class="font-label-lg text-label-lg font-bold text-primary">The King's Christmas Broadcast</span>
+                      </div>
+                      <p class="font-body-md text-body-md text-on-surface">A cherished civic tradition where the monarch shares an annual reflective television address to the Commonwealth at precisely 3:00 PM on Christmas Day.</p>
+                    </div>
+                  </div>
+                  <div class="bg-surface-container-low p-space-md rounded-xl flex gap-space-md items-start hover:bg-surface-container transition-colors">
+                    <div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-sm text-primary font-bold font-label-md">4</div>
+                    <div class="flex flex-col gap-1 min-w-0">
+                      <div class="flex items-center gap-2">
+                        <span class="font-label-lg text-label-lg font-bold text-primary">Boxing Day (December 26th)</span>
+                      </div>
+                      <p class="font-body-md text-body-md text-on-surface">A statutory public bank holiday centered on country walks, visiting distant relations, attending top-tier football fixtures, and shopping seasonal clearance deals.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-sm">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-tertiary text-[20px]">auto_stories</span>
+                    <span class="font-label-md text-label-md font-bold text-on-surface">Tradition Spotlight &amp; Folklore</span>
+                  </div>
+                  <span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-semibold">British Custom</span>
+                </div>
+                <div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-2 shadow-xs">
+                  <span class="font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant font-bold">Living Tradition</span>
+                  <p class="font-body-md text-body-md text-on-surface italic">"In the UK, festive dinner is accompanied by pulling paper crackers, wearing colorful crowns throughout the meal, and sharing lighthearted table jokes."</p>
+                </div>
+                <div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-1 shadow-xs">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant font-bold">Historic British Heritage</span>
+                    <span class="font-label-sm text-label-sm text-tertiary-container font-bold">Statutory Holiday</span>
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface font-semibold text-primary">The Origins of Boxing Day (Dec 26th)</p>
+                  <p class="font-body-md text-body-md text-on-surface-variant">Dating back to the Victorian era, wealthy employers gifted tradespeople and servants with 'Christmas boxes' containing gifts; today it is celebrated with countryside walks and sports.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Cross-Cultural Synthesis Section -->
+      <div class="w-full bg-surface-container-low py-space-xl px-margin lg:px-margin-lg">
+        <div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+            <div>
+              <div class="flex items-center gap-2 text-primary font-label-md text-label-md font-bold uppercase tracking-wider">
+                <span class="material-symbols-outlined text-[18px]">splitscreen</span>
+                <span>Comparative Synthesis</span>
+              </div>
+              <h2 class="font-headline-xl text-headline-xl text-on-surface mt-1">Compare &amp; Contrast: Cultural Analysis</h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">Analyze cultural similarities and differences across American and British traditions.</p>
+            </div>
+            <div class="flex items-center gap-space-xs bg-surface-container-lowest p-1.5 rounded-xl shadow-xs">
+              <button class="px-4 py-2 rounded-lg font-label-md text-label-md font-semibold bg-primary text-on-primary transition-all shadow-xs" id="btn-view-venn" onclick="switchActivityView('venn')">Venn Diagram</button>
+              <button class="px-4 py-2 rounded-lg font-label-md text-label-md font-semibold text-on-surface-variant hover:text-on-surface transition-all" id="btn-view-table" onclick="switchActivityView('table')">Contrast Matrix</button>
+            </div>
+          </div>
+
+          <!-- Venn Diagram View -->
+          <div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-xs border border-slate-100" id="view-venn-container">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-stretch">
+              <div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between">
+                <div class="flex flex-col gap-space-sm">
+                  <div class="flex items-center gap-2">
+                    <span class="text-xl">🇺🇸</span>
+                    <span class="font-headline-sm text-headline-sm text-secondary font-bold">Distinctly US</span>
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface-variant">Traditions that define the American holiday landscape:</p>
+                  <ul class="space-y-space-xs font-body-md text-body-md text-on-surface">
+                    <li class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-1">check_circle</span>
+                      <span>Leaving milk &amp; cookies for Santa Claus</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-1">check_circle</span>
+                      <span>Massive neighborhood exterior light spectacles</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-1">check_circle</span>
+                      <span>Long-distance inter-state holiday flights</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-1">check_circle</span>
+                      <span>Emphasis on Christmas Eve gift anticipation</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-space-md pt-space-sm bg-surface-container px-3 py-2 rounded-lg">
+                  <span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Distinct Trait:</span>
+                  <p class="font-label-md text-label-md text-on-surface font-semibold">Suburban visual spectacle &amp; Santa folklore</p>
+                </div>
+              </div>
+
+              <div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between shadow-xs">
+                <div class="flex flex-col gap-space-sm">
+                  <div class="flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-[22px]">hub</span>
+                    <span class="font-headline-sm text-headline-sm text-primary font-bold text-center">Shared Core (Both)</span>
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface-variant text-center">Universal foundational customs across both English-speaking nations:</p>
+                  <ul class="space-y-space-xs font-body-md text-body-md text-on-surface">
+                    <li class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-1">star</span>
+                      <span>Decorating evergreen Christmas trees</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-1">star</span>
+                      <span>Reciprocal gift-giving among family</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-1">star</span>
+                      <span>Sumptuous festive family dinners with roast meats</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-1">star</span>
+                      <span>Singing classic seasonal holiday carols</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-space-md pt-space-sm bg-surface-container-lowest px-3 py-2 rounded-lg text-center">
+                  <span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Shared Cultural Bond:</span>
+                  <p class="font-label-md text-label-md text-on-surface font-semibold">Festive family dinners, evergreens &amp; holiday music</p>
+                </div>
+              </div>
+
+              <div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between">
+                <div class="flex flex-col gap-space-sm">
+                  <div class="flex items-center gap-2">
+                    <span class="text-xl">🇬🇧</span>
+                    <span class="font-headline-sm text-headline-sm text-tertiary font-bold">Distinctly UK</span>
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface-variant">Signature elements unique to Great Britain:</p>
+                  <ul class="space-y-space-xs font-body-md text-body-md text-on-surface">
+                    <li class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-tertiary-container text-[18px] shrink-0 mt-1">check_circle</span>
+                      <span>Snapping table Christmas crackers with paper crowns</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-tertiary-container text-[18px] shrink-0 mt-1">check_circle</span>
+                      <span>Eating rich mince pies and brandy-flamed pudding</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-tertiary-container text-[18px] shrink-0 mt-1">check_circle</span>
+                      <span>Watching the official King's Christmas broadcast</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-tertiary-container text-[18px] shrink-0 mt-1">check_circle</span>
+                      <span>Boxing Day holiday matches &amp; store sales</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-space-md pt-space-sm bg-surface-container px-3 py-2 rounded-lg">
+                  <span class="font-label-sm text-label-sm text-tertiary font-bold uppercase tracking-wider">Distinct Trait:</span>
+                  <p class="font-label-md text-label-md text-on-surface font-semibold">Table ritual games &amp; two-day national holiday</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Table View (Hidden by default) -->
+          <div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-xs border border-slate-100 hidden" id="view-table-container">
+            <div class="overflow-x-auto">
+              <table class="w-full text-left font-body-md text-body-md">
+                <thead>
+                  <tr class="bg-surface-container-low text-on-surface">
+                    <th class="p-space-md font-label-md text-label-md uppercase font-bold text-on-surface-variant">Category</th>
+                    <th class="p-space-md font-label-md text-label-md uppercase font-bold text-secondary">🇺🇸 United States</th>
+                    <th class="p-space-md font-label-md text-label-md uppercase font-bold text-tertiary">🇬🇧 United Kingdom</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-surface-container">
+                  <tr class="hover:bg-surface-container-low/50">
+                    <td class="p-space-md font-bold text-primary">Peak Public Holiday</td>
+                    <td class="p-space-md text-on-surface">Christmas Day (December 25th)</td>
+                    <td class="p-space-md text-on-surface">Christmas Day &amp; Boxing Day (Dec 25–26)</td>
+                  </tr>
+                  <tr class="hover:bg-surface-container-low/50">
+                    <td class="p-space-md font-bold text-primary">Table Dinners &amp; Games</td>
+                    <td class="p-space-md text-on-surface">Family meals; focus on gift unwrapping &amp; football</td>
+                    <td class="p-space-md text-on-surface">Pulling Christmas crackers with jokes &amp; wearing paper crowns</td>
+                  </tr>
+                  <tr class="hover:bg-surface-container-low/50">
+                    <td class="p-space-md font-bold text-primary">Signature Desserts</td>
+                    <td class="p-space-md text-on-surface">Pumpkin pie, apple pie, decorated sugar cookies</td>
+                    <td class="p-space-md text-on-surface">Mince pies with brandy cream, flaming Christmas pudding</td>
+                  </tr>
+                  <tr class="hover:bg-surface-container-low/50">
+                    <td class="p-space-md font-bold text-primary">Eve Ritual</td>
+                    <td class="p-space-md text-on-surface">Setting out milk and cookies for Santa Claus</td>
+                    <td class="p-space-md text-on-surface">Leaving a mince pie and sherry for Father Christmas</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Bottom Navigation Controls -->
+          <div class="flex items-center justify-between pt-space-md">
+            <a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-lg text-label-lg transition-colors shadow-xs" data-path="home" href="#home">
+              <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+              <span>Previous: Home</span>
+            </a>
+            <div class="hidden sm:flex items-center gap-2">
+              <span class="w-6 h-2.5 rounded-full bg-primary"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></span>
+            </div>
+            <a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-colors shadow-xs" data-path="spring" href="#spring">
+              <span>Next: Spring Celebrations</span>
+              <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================== -->
+    <!-- SECTION 3: SPRING OCCASIONS TAB (#spring)                      -->
+    <!-- ============================================================== -->
+    <section id="tab-spring" class="tab-content w-full">
+      <div class="max-w-7xl mx-auto w-full px-margin lg:px-margin-lg pt-space-lg pb-space-md">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-md">
+          <div class="flex flex-col gap-space-xs">
+            <div class="flex items-center gap-space-xs text-on-surface-variant">
+              <span class="material-symbols-outlined text-[18px] text-tertiary-container">eco</span>
+              <span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold text-tertiary">Season 2 / 4 • Spring Traditions</span>
+              <span class="text-outline-variant">•</span>
+              <span class="font-label-sm text-label-sm bg-surface-container-high text-primary font-bold px-2 py-0.5 rounded-full">Transatlantic Celebrations</span>
+            </div>
+            <h1 class="font-headline-xl text-headline-xl text-on-background tracking-tight">
+              Spring Occasions: Culture &amp; Renewal
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+              Explore how Irish-American heritage and springtime renewal bring colorful traditions to streets and homes across the United States and the United Kingdom.
+            </p>
+          </div>
+        </div>
+
+        <!-- Spring Festive Emblems & Lore Ticker -->
+        <div class="bg-surface-container-low rounded-xl p-space-md shadow-xs flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+          <div class="flex items-center gap-space-sm shrink-0">
+            <div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shadow-xs">
+              <span class="material-symbols-outlined text-[20px]">local_florist</span>
+            </div>
+            <div>
+              <span class="font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant block">Festive Lore &amp; Emblems</span>
+              <span class="font-label-lg text-label-lg font-bold text-primary">Featured Spring Customs (Tap to explore)</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center gap-space-xs">
+            <button class="bg-surface-container-lowest hover:bg-surface-container text-primary font-label-md text-label-md px-space-md py-1.5 rounded-full shadow-xs flex items-center gap-1.5 transition-transform active:scale-95" onclick="playPhonetic('Chicago Emerald River', 'US Civic Spectacle', 'Since 1962, the Chicago Journeymen Plumbers turn the river bright emerald green with 40 lbs of eco-friendly dye, witnessed by 400,000 people.')">
+              <span class="w-2 h-2 rounded-full bg-secondary"></span>
+              <span>Green River</span>
+              <span class="font-label-sm text-[11px] text-on-surface-variant opacity-75">Chicago Custom</span>
+            </button>
+            <button class="bg-surface-container-lowest hover:bg-surface-container text-primary font-label-md text-label-md px-space-md py-1.5 rounded-full shadow-xs flex items-center gap-1.5 transition-transform active:scale-95" onclick="playPhonetic('The Shamrock', 'Celtic Folklore Emblem', 'According to folklore, St. Patrick used the three leaves of the shamrock to symbolize the Trinity; today it is worn on lapels for good luck.')">
+              <span class="w-2 h-2 rounded-full bg-primary"></span>
+              <span>Shamrock</span>
+              <span class="font-label-sm text-[11px] text-on-surface-variant opacity-75">Irish Heritage</span>
+            </button>
+            <button class="bg-surface-container-lowest hover:bg-surface-container text-primary font-label-md text-label-md px-space-md py-1.5 rounded-full shadow-xs flex items-center gap-1.5 transition-transform active:scale-95" onclick="playPhonetic('White House Egg Roll', 'US Presidential Tradition', 'An annual Easter Monday celebration begun in 1878 under President Rutherford B. Hayes, where children roll colored eggs across the South Lawn.')">
+              <span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+              <span>Egg Roll</span>
+              <span class="font-label-sm text-[11px] text-on-surface-variant opacity-75">White House Tradition</span>
+            </button>
+            <button class="bg-surface-container-lowest hover:bg-surface-container text-primary font-label-md text-label-md px-space-md py-1.5 rounded-full shadow-xs flex items-center gap-1.5 transition-transform active:scale-95" onclick="playPhonetic('Hot Cross Buns', 'British Easter Delicacy', 'Fragrant spiced yeast buns marked with a white cross on top, traditionally baked and enjoyed warm with butter on Good Friday in the UK.')">
+              <span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+              <span>Hot Cross Buns</span>
+              <span class="font-label-sm text-[11px] text-on-surface-variant opacity-75">UK Holiday Delicacy</span>
+            </button>
+            <button class="bg-surface-container-lowest hover:bg-surface-container text-primary font-label-md text-label-md px-space-md py-1.5 rounded-full shadow-xs flex items-center gap-1.5 transition-transform active:scale-95" onclick="playPhonetic('Corned Beef &amp; Cabbage', 'Irish-American Culinary Classic', 'A signature dish created by Irish immigrants in 19th-century New York; enjoyed across the US on St. Patrick\'s Day alongside soda bread.')">
+              <span class="w-2 h-2 rounded-full bg-surface-tint"></span>
+              <span>Corned Beef</span>
+              <span class="font-label-sm text-[11px] text-on-surface-variant opacity-75">Festive Feast</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Spring Tradition Display Box -->
+        <div class="hidden mt-3 p-space-md bg-surface-container-lowest rounded-xl shadow-xs border border-slate-100 flex-col gap-1" id="vocab-display-spring">
+          <div class="flex items-center justify-between">
+            <span class="font-headline-sm text-headline-sm text-primary font-bold" id="vocab-term-spring">Tradition</span>
+            <span class="font-label-md text-label-md text-on-surface-variant italic" id="vocab-ipa-spring">Category</span>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface" id="vocab-def-spring">Cultural details go here.</p>
+        </div>
+      </div>
+
+      <!-- Comparison Cards -->
+      <div class="max-w-7xl mx-auto w-full px-margin lg:px-margin-lg py-space-md">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter lg:gap-gutter-lg items-stretch">
+          
+          <!-- St. Patrick's Day Card (US Focus) -->
+          <article class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden group">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-tertiary-container via-tertiary-fixed-dim to-primary"></div>
+            <div>
+              <div class="flex items-center justify-between gap-space-sm pb-space-md">
+                <div class="flex items-center gap-2 bg-surface-container-low px-3 py-1 rounded-full">
+                  <span class="text-[16px]">🇺🇸</span>
+                  <span class="font-label-md text-label-md text-primary font-bold">US Cultural Celebration</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                </div>
+                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider bg-surface-container px-2.5 py-0.5 rounded font-bold">March 17th</span>
+              </div>
+              <div class="flex items-start justify-between gap-space-sm pb-space-sm">
+                <div>
+                  <h2 class="font-headline-md text-headline-md text-on-surface">St. Patrick's Day</h2>
+                  <p class="font-body-md text-body-md text-on-surface-variant">Irish-American heritage celebrated in giant urban spectacles.</p>
+                </div>
+              </div>
+
+              <!-- Image Visual Showcase -->
+              <div class="relative w-full aspect-[16/9] rounded-xl overflow-hidden my-space-md shadow-xs">
+                <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" alt="Chicago River dyed emerald green on St. Patrick's Day" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQVwuKMeBmNF8R3PI8YVdZVbQlpAJTUb1RowmuUrZLOCYMUodtZcWP62WL8BVc1YQ8SZa-l83e0yTe7yRGFRRnM1qnBZMtiu2QXfIZHE-cLR83wMr6UNak-wxNHKi9roWShnla7xp3RxqoQaEVmKPbdSP584VNlMBwGQMAL4mXf_ZlBalQa5sxdMaExKQ2gd_Ml5J4qvnzqjNXSIHq3t1jk580yRa5zQChjjDQGmg"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end p-space-md">
+                  <span class="bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold flex items-center gap-1.5 shadow-xs">
+                    <span class="w-2 h-2 rounded-full bg-tertiary"></span> Chicago River Dyed Emerald Green
+                  </span>
+                </div>
+              </div>
+
+              <!-- Cultural Highlights -->
+              <div class="flex flex-col gap-space-sm pt-space-xs">
+                <h3 class="font-label-lg text-label-lg font-bold text-primary uppercase tracking-wide flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[18px]">verified</span> Cultural Highlights
+                </h3>
+                <div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+                  <div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 font-label-sm text-label-sm mt-0.5">1</div>
+                  <div class="flex flex-col">
+                    <span class="font-label-lg text-label-lg font-bold text-on-surface">Massive Street Parades</span>
+                    <p class="font-body-md text-body-md text-on-surface-variant">The New York City and Boston parades attract millions of spectators with marching bands, bagpipes, and honored veteran groups.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+                  <div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 font-label-sm text-label-sm mt-0.5">2</div>
+                  <div class="flex flex-col">
+                    <span class="font-label-lg text-label-lg font-bold text-on-surface">The Green River in Chicago</span>
+                    <p class="font-body-md text-body-md text-on-surface-variant">The city of Chicago uses eco-friendly dye to turn the entire Chicago River vivid green for the festival weekend, a spectacle watched by thousands from bridges.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+                  <div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 font-label-sm text-label-sm mt-0.5">3</div>
+                  <div class="flex flex-col">
+                    <span class="font-label-lg text-label-lg font-bold text-on-surface">Wearing Green &amp; Shamrocks</span>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Tradition dictates that you wear green clothing or risk being playfully pinched by peers; people pin clover shamrocks to their jackets for good luck.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+                  <div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 font-label-sm text-label-sm mt-0.5">4</div>
+                  <div class="flex flex-col">
+                    <span class="font-label-lg text-label-lg font-bold text-on-surface">Traditional Irish-American Food</span>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Families and pubs serve slow-cooked corned beef with cabbage and soda bread, accompanied by bright green frosted cupcakes and festive beverages.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tradition Spotlight Box -->
+            <div class="mt-space-lg p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs shadow-inner">
+              <div class="flex items-center justify-between">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider font-bold text-primary flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[16px]">auto_stories</span> Tradition Spotlight &amp; Folklore
+                </span>
+                <span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold">American Custom</span>
+              </div>
+              <div class="font-body-md text-body-md text-on-surface italic pl-space-xs bg-surface-container-lowest/70 p-2 rounded-lg">
+                “Every March 17th, American cities erupt in emerald green, honoring the generations of Irish immigrants who helped build the nation.”
+              </div>
+              <div class="flex items-start gap-2 pt-1">
+                <span class="font-label-md text-label-md font-bold text-secondary shrink-0">Living Folklore:</span>
+                <span class="font-body-md text-body-md text-on-surface">
+                  <strong>The "Wearing of the Green"</strong> — Tradition holds that wearing green makes one invisible to mythical leprechauns; anyone caught without green gets a friendly, customary pinch!
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Easter Card (Shared Anglo-American) -->
+          <article class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden group">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-secondary to-tertiary"></div>
+            <div>
+              <div class="flex items-center justify-between gap-space-sm pb-space-md">
+                <div class="flex items-center gap-2 bg-surface-container-low px-3 py-1 rounded-full">
+                  <span class="text-[16px]">🇺🇸 &amp; 🇬🇧</span>
+                  <span class="font-label-md text-label-md text-primary font-bold">Shared Anglo-American Tradition</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                </div>
+                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider bg-surface-container px-2.5 py-0.5 rounded font-bold">Spring Sunday</span>
+              </div>
+              <div class="flex items-start justify-between gap-space-sm pb-space-sm">
+                <div>
+                  <h2 class="font-headline-md text-headline-md text-on-surface">Easter Traditions</h2>
+                  <p class="font-body-md text-body-md text-on-surface-variant">Chocolate treats, festive garden hunts, and seasonal rebirth.</p>
+                </div>
+              </div>
+
+              <!-- Image Visual Showcase -->
+              <div class="relative w-full aspect-[16/9] rounded-xl overflow-hidden my-space-md shadow-xs">
+                <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" alt="Easter egg hunt in spring garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBD33pN35XdI2GMGdJNakTqAkQbGXB8yMM6nA4aN27FDPvSvOHQrN-X-MlFKA9bGWWMVlA_XAOYyp7Ctd-yVP3Xpst4W_I0ycmhrHGDV9JXWpoUu0ccXTK_mB7L9Fmk3kLAN5U2OEK4TmVwAzLblItqT5ofOq55-ejrxJXwHMZBsAThhfeWuQBC8v69sIdA5Nn3-mTuDnl-C6_6NO5eqNnMNZ1DZQZruUBWgRxvX0"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end p-space-md">
+                  <span class="bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold flex items-center gap-1.5 shadow-xs">
+                    <span class="w-2 h-2 rounded-full bg-secondary"></span> Garden Egg Hunt &amp; Spring Florals
+                  </span>
+                </div>
+              </div>
+
+              <!-- Cultural Highlights -->
+              <div class="flex flex-col gap-space-sm pt-space-xs">
+                <h3 class="font-label-lg text-label-lg font-bold text-primary uppercase tracking-wide flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[18px]">verified</span> Cultural Highlights
+                </h3>
+                <div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+                  <div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 font-label-sm text-label-sm mt-0.5">1</div>
+                  <div class="flex flex-col">
+                    <span class="font-label-lg text-label-lg font-bold text-on-surface">Outdoor Easter Egg Hunts</span>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Parents hide colorful plastic eggs (filled with sweets) or hand-painted eggs throughout gardens and public parks for excited children to discover.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+                  <div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 font-label-sm text-label-sm mt-0.5">2</div>
+                  <div class="flex flex-col">
+                    <span class="font-label-lg text-label-lg font-bold text-on-surface">Chocolate Eggs &amp; Bunnies</span>
+                    <p class="font-body-md text-body-md text-on-surface-variant">In the UK, shops display giant hollow chocolate eggs wrapped in shiny foil. In the US, hollow chocolate bunnies and colorful marshmallow ‘Peeps’ are holiday favorites.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+                  <div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 font-label-sm text-label-sm mt-0.5">3</div>
+                  <div class="flex flex-col">
+                    <span class="font-label-lg text-label-lg font-bold text-on-surface">The White House Egg Roll (US)</span>
+                    <p class="font-body-md text-body-md text-on-surface-variant">A famous 140-year-old presidential tradition on Easter Monday where children and families roll colorful dyed hard-boiled eggs with long wooden spoons across the South Lawn.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+                  <div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 font-label-sm text-label-sm mt-0.5">4</div>
+                  <div class="flex flex-col">
+                    <span class="font-label-lg text-label-lg font-bold text-on-surface">Hot Cross Buns &amp; Sunday Roast (UK)</span>
+                    <p class="font-body-md text-body-md text-on-surface-variant">British bakeries produce warm, spiced fruit buns with a baked icing cross on Good Friday, followed by roasted spring lamb, mint sauce, and potatoes on Easter Sunday.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tradition Spotlight Box -->
+            <div class="mt-space-lg p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs shadow-inner">
+              <div class="flex items-center justify-between">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider font-bold text-primary flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[16px]">auto_stories</span> Tradition Spotlight &amp; Folklore
+                </span>
+                <span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold">British Custom</span>
+              </div>
+              <div class="font-body-md text-body-md text-on-surface italic pl-space-xs bg-surface-container-lowest/70 p-2 rounded-lg">
+                “From garden egg hunts to Sunday roasts with mint sauce, Easter marks the joyful return of spring warmth and rebirth across Britain.”
+              </div>
+              <div class="flex items-start gap-2 pt-1">
+                <span class="font-label-md text-label-md font-bold text-tertiary shrink-0">Living Folklore:</span>
+                <span class="font-body-md text-body-md text-on-surface">
+                  <strong>Easter Eggs &amp; Rebirth</strong> — Decorating eggs traces back to ancient spring festivals celebrating fertility; in the UK, cracking open hollow chocolate eggs on Easter morning has been a favorite since 1873.
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Cultural Insights & Holiday Curiosities Section -->
+      <div class="max-w-7xl mx-auto w-full px-margin lg:px-margin-lg py-space-lg">
+        <div class="bg-surface-container-lowest rounded-2xl p-space-lg md:p-space-xl shadow-sm border border-slate-100">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-gutter-lg items-center">
+            
+            <!-- Left: Cultural Insight -->
+            <div class="lg:col-span-7 flex flex-col gap-space-sm">
+              <div class="flex items-center gap-space-xs">
+                <span class="w-3 h-3 rounded-full bg-secondary"></span>
+                <span class="font-label-sm text-label-sm font-bold text-secondary uppercase tracking-widest">Cultural Insight</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-on-surface font-bold">Why Do Cities Celebrate Cross-Border Traditions?</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Festivals like St. Patrick's Day demonstrate how international customs enrich American and British communities through three main pillars:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-space-xs">
+                <div class="bg-surface-container-low p-3 rounded-xl flex flex-col gap-1 shadow-xs">
+                  <div class="flex items-center gap-1.5 text-tertiary font-label-md text-label-md font-bold">
+                    <span class="material-symbols-outlined text-[18px]">diversity_3</span>
+                    <span>Cultural Identity</span>
+                  </div>
+                  <p class="font-body-md text-[13px] text-on-surface-variant leading-snug">Preserves ancestral roots and shares heritage with new generations.</p>
+                </div>
+                <div class="bg-surface-container-low p-3 rounded-xl flex flex-col gap-1 shadow-xs">
+                  <div class="flex items-center gap-1.5 text-primary font-label-md text-label-md font-bold">
+                    <span class="material-symbols-outlined text-[18px]">storefront</span>
+                    <span>Local Economy</span>
+                  </div>
+                  <p class="font-body-md text-[13px] text-on-surface-variant leading-snug">Parades and festivals attract visitors, boosting local commerce.</p>
+                </div>
+                <div class="bg-surface-container-low p-3 rounded-xl flex flex-col gap-1 shadow-xs">
+                  <div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md font-bold">
+                    <span class="material-symbols-outlined text-[18px]">handshake</span>
+                    <span>Inclusion</span>
+                  </div>
+                  <p class="font-body-md text-[13px] text-on-surface-variant leading-snug">Open public celebrations bring neighbors of all backgrounds together.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Holiday Curiosities Card -->
+            <div class="lg:col-span-5 bg-surface-container-high rounded-xl p-space-md shadow-xs flex flex-col gap-space-xs border border-surface-container">
+              <div class="flex items-center justify-between">
+                <span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-primary flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[18px]">lightbulb</span> Holiday Curiosities
+                </span>
+                <span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded-full font-semibold">Did You Know?</span>
+              </div>
+              <h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Transatlantic Spring Traditions</h4>
+              <p class="font-body-md text-body-md text-on-surface-variant text-[14px]">
+                Surprising historical facts behind American and British springtime customs:
+              </p>
+              <div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-2.5 mt-1 shadow-xs">
+                <div class="font-body-md text-body-md text-on-surface text-[13px] leading-relaxed">
+                  <strong class="text-primary font-bold">1. White House Egg Roll (US):</strong> In 1878, President Rutherford B. Hayes invited neighborhood families to roll eggs across the South Lawn after Congress banned egg games on Capitol Hill. Today, over 30,000 participate every Easter Monday.
+                </div>
+                <div class="w-full h-[1px] bg-surface-container"></div>
+                <div class="font-body-md text-body-md text-on-surface text-[13px] leading-relaxed">
+                  <strong class="text-primary font-bold">2. The UK Chocolate Egg Craze:</strong> British confectioners created the first hollow chocolate Easter egg in 1873. Today, the UK eats over 80 million chocolate eggs each spring!
+                </div>
+                <div class="w-full h-[1px] bg-surface-container"></div>
+                <div class="font-body-md text-body-md text-on-surface text-[13px] leading-relaxed">
+                  <strong class="text-primary font-bold">3. The Chicago Emerald River:</strong> Begun in 1962 when plumbers used vegetable dye to trace underground leaks, the river dyeing has become one of the most famous St. Patrick's Day spectacles in the world.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bottom Navigation Controls -->
+        <div class="flex items-center justify-between pt-space-lg">
+          <a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-lg text-label-lg transition-colors shadow-xs" data-path="winter" href="#winter">
+            <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+            <span>Previous: Winter Holidays</span>
+          </a>
+          <div class="hidden sm:flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></span>
+            <span class="w-6 h-2.5 rounded-full bg-primary"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></span>
+          </div>
+          <a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-colors shadow-xs" data-path="summer" href="#summer">
+            <span>Next: Summer Festivals</span>
+            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================== -->
+    <!-- SECTION 4: SUMMER EVENTS TAB (#summer)                         -->
+    <!-- ============================================================== -->
+    <section id="tab-summer" class="tab-content w-full">
+      <div class="max-w-7xl mx-auto w-full px-margin lg:px-margin-lg py-space-lg md:py-space-xl">
+        
+        <!-- Header Banner -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg mb-space-xl">
+          <div class="flex flex-col gap-space-xs max-w-3xl">
+            <div class="flex items-center gap-space-sm flex-wrap">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-widest font-bold">
+                <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Season 3 / 4 • Summer Events
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                <span class="material-symbols-outlined text-[14px]">diversity_3</span>
+                Cultural Comparison: US &amp; UK
+              </span>
+            </div>
+            <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight mt-space-xs">
+              Summer Events: Festivals &amp; Freedom
+            </h1>
+            <p class="font-body-md md:font-body-xl text-body-md md:text-body-xl text-on-surface-variant max-w-2xl leading-relaxed">
+              Compare patriotic American summer festivities with Britain’s most energetic multicultural street carnival.
+            </p>
+          </div>
+          <div class="flex items-center gap-space-sm bg-surface-container-low p-2 rounded-xl shrink-0">
+            <button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-xs hover:opacity-95 transition-opacity" id="view-mode-btn">
+              <span class="material-symbols-outlined text-[18px]">splitscreen</span>
+              <span id="view-mode-text">Full Dual Slide</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Featured Summer Celebrations & Highlights Strip -->
+        <div class="w-full bg-surface-container-lowest rounded-2xl p-space-md shadow-sm border border-slate-100 mb-space-xl">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-sm shrink-0">
+              <span class="w-7 h-7 rounded-lg bg-secondary-container text-on-secondary flex items-center justify-center font-label-sm text-label-sm font-bold"><span class="material-symbols-outlined text-[18px]">wb_sunny</span></span>
+              <div class="flex flex-col">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Featured Summer Highlights</span>
+                <span class="font-label-md text-label-md text-primary font-semibold">5 Iconic Seasonal Customs (Tap to inspect lore)</span>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-space-xs">
+              <button class="vocab-term group flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-all text-left" data-def="Commemorating the Declaration of Independence in 1776; celebrated with nationwide family cookouts, community parades, concerts, and colossal nighttime fireworks spectacles." data-phonetic="US National Holiday" data-term="Independence Day">
+                <span class="font-label-md text-label-md text-primary font-medium">Independence Day</span>
+                <span class="material-symbols-outlined text-outline text-[16px] group-hover:text-primary transition-colors">info</span>
+              </button>
+              <button class="vocab-term group flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-all text-left" data-def="The ultimate American summer ritual: gathering in backyards with charcoal grills to prepare ribs, burgers, hot dogs, and sweet corn on the cob." data-phonetic="American Culinary Custom" data-term="Backyard Barbecue">
+                <span class="font-label-md text-label-md text-primary font-medium">Backyard Barbecue</span>
+                <span class="material-symbols-outlined text-outline text-[16px] group-hover:text-primary transition-colors">info</span>
+              </button>
+              <button class="vocab-term group flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-all text-left" data-def="Europe's biggest street festival, founded in 1966 in West London to celebrate British Caribbean culture, unity, calypso music, and masquerade arts." data-phonetic="London Bank Holiday" data-term="Notting Hill Carnival">
+                <span class="font-label-md text-label-md text-primary font-medium">Notting Hill Carnival</span>
+                <span class="material-symbols-outlined text-outline text-[16px] group-hover:text-primary transition-colors">info</span>
+              </button>
+              <button class="vocab-term group flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-all text-left" data-def="Dazzling costumed masquerade bands parading through West London with giant plumes of dyed feathers, iridescent wings, beads, and glitter to soca music." data-phonetic="Caribbean Heritage" data-term="Masquerade ('Mas')">
+                <span class="font-label-md text-label-md text-primary font-medium">Masquerade ('Mas')</span>
+                <span class="material-symbols-outlined text-outline text-[16px] group-hover:text-primary transition-colors">info</span>
+              </button>
+              <button class="vocab-term group flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-all text-left" data-def="Giant acoustic speaker stacks and traditional steel drum bands broadcasting calypso, reggae, and soca across London streets during August bank holiday." data-phonetic="Street Music Culture" data-term="Sound Systems">
+                <span class="font-label-md text-label-md text-primary font-medium">Sound Systems</span>
+                <span class="material-symbols-outlined text-outline text-[16px] group-hover:text-primary transition-colors">info</span>
+              </button>
+            </div>
+          </div>
+          <!-- Expandable Pop-panel -->
+          <div class="hidden mt-space-md pt-space-sm bg-surface-container-low rounded-xl p-space-md" id="vocab-display">
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center gap-space-xs">
+                  <span class="font-headline-sm text-headline-sm text-primary font-bold" id="vocab-word">Independence Day</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-highest px-2 py-0.5 rounded" id="vocab-ipa">US National Holiday</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface" id="vocab-meaning">Cultural significance description appears here.</p>
+              </div>
+              <button class="text-on-surface-variant hover:text-primary p-1" id="close-vocab-btn">
+                <span class="material-symbols-outlined text-[18px]">close</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAIN DUAL-PERSPECTIVE COMPARISON GRID -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter lg:gap-gutter-lg mb-space-xl" id="comparison-container">
+          
+          <!-- CARD 1: 4TH OF JULY (US) -->
+          <div class="flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md">
+            <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-surface-container group">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="American family 4th of July backyard cookout with sparklers and barbecue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4ejIOdQqtlKEZLs27qFLK5LYq2hv-m-sEMhjMSQJTSWPLQpz9GDW2kqEvnl27FKI_hLBm99h6eohTRKfX2BNSL9q4BGogt9PknEwMEOnvyxhlJW1ezvqiAiAO1A2evcuBuYChWuzEVWzmQSexoluhqF4bfGuOZizlEPvVRd5AdKeNVf7iOEY8kLRkJ8IC25YxH2GMkzOGHPyjrPUP5jWiAbPqiEhFPqh1mEO9Qt4"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+              <div class="absolute top-space-md left-space-md flex items-center gap-space-xs">
+                <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-xs">
+                  <span class="text-base leading-none">🇺🇸</span>
+                  <span class="font-label-md text-label-md text-primary font-bold">United States</span>
+                  <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                </div>
+              </div>
+              <div class="absolute top-space-md right-space-md">
+                <span class="px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold tracking-wide uppercase">
+                  Federal Holiday
+                </span>
+              </div>
+              <div class="absolute bottom-space-md left-space-md right-space-md text-white">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-container-highest">Calendar Reference</span>
+                <h2 class="font-headline-md text-headline-md font-bold text-white tracking-tight">4th of July (US Independence Day)</h2>
+                <div class="flex items-center gap-space-xs text-surface-container-low font-label-md text-label-md mt-0.5">
+                  <span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                  <span>July 4th (National Holiday)</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-lg">
+              <div class="flex flex-col gap-space-md">
+                <div class="flex items-center justify-between pb-space-xs">
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Core Cultural Customs</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">4 Essential Practices</span>
+                </div>
+                <div class="flex items-start gap-space-md p-space-sm rounded-xl bg-surface hover:bg-surface-container-low transition-colors">
+                  <div class="w-10 h-10 rounded-xl bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">outdoor_grill</span>
+                  </div>
+                  <div class="flex flex-col gap-0.5">
+                    <h3 class="font-label-lg text-label-lg text-on-surface font-bold">1. Family Barbecues &amp; Cookouts</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Neighbors gather in backyards and parks to grill hamburgers, hot dogs, ribs, and sweet corn in casual community lunches.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-md p-space-sm rounded-xl bg-surface hover:bg-surface-container-low transition-colors">
+                  <div class="w-10 h-10 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">palette</span>
+                  </div>
+                  <div class="flex flex-col gap-0.5">
+                    <h3 class="font-label-lg text-label-lg text-on-surface font-bold">2. Patriotic Colors</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Everyone wears red, white, and blue shirts, hats, and festive face paint to express national unity and civic pride.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-md p-space-sm rounded-xl bg-surface hover:bg-surface-container-low transition-colors">
+                  <div class="w-10 h-10 rounded-xl bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">paragliding</span>
+                  </div>
+                  <div class="flex flex-col gap-0.5">
+                    <h3 class="font-label-lg text-label-lg text-on-surface font-bold">3. Community Parades</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Morning parades feature marching brass bands, antique fire engines, local military veterans, and ornate town floats.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-md p-space-sm rounded-xl bg-surface hover:bg-surface-container-low transition-colors">
+                  <div class="w-10 h-10 rounded-xl bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">flare</span>
+                  </div>
+                  <div class="flex flex-col gap-0.5">
+                    <h3 class="font-label-lg text-label-lg text-on-surface font-bold">4. Evening Fireworks Displays</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Spectacular pyrotechnic fireworks illuminate the night sky across towns nationwide, synced to orchestral anthems in Washington D.C.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tradition Spotlight Box -->
+              <div class="mt-space-sm p-space-md rounded-xl bg-surface-container-low">
+                <div class="flex items-center justify-between mb-space-xs">
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-primary text-[18px]">auto_stories</span>
+                    <span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-primary">Tradition Spotlight &amp; Folklore</span>
+                  </div>
+                  <span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded-full font-semibold">American Custom</span>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                  <div class="p-2.5 rounded-lg bg-surface-container-lowest">
+                    <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-0.5">The Spirit of the 4th</span>
+                    <p class="font-body-md text-body-md text-primary font-medium italic">
+                      “Across small towns and vast cities, July 4th unites neighborhoods around outdoor grilling, patriotic tunes, and night skies lit by colorful fireworks.”
+                    </p>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-surface-container-lowest flex items-start gap-2">
+                    <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">outdoor_grill</span>
+                    <div class="flex flex-col">
+                      <span class="font-label-md text-label-md text-on-surface font-bold">Living Tradition: The American Cookout</span>
+                      <span class="font-body-md text-body-md text-on-surface-variant">The quintessential summertime gathering where food is cooked over open flame and enjoyed picnic-style in yards and public parks.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2: NOTTING HILL CARNIVAL (UK) -->
+          <div class="flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md">
+            <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-surface-container group">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Vibrant Notting Hill Carnival street parade dancer with iridescent feather headdress in London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2dOWg3bcVycyn-_XIDQe-iyfrZDStGA0ZkBe7S0bUd5E3peEicHPZUAZlJcwlYXsm9qCzYDiJ_ZTt8tThUN65ZL73pfIhUy0wQi1ulwJnUG2ZoIt3tup2YltajsNG7HKdOdHxQ8BwHZOMQODTwZH6huQc5rAWuVdyvG6cd5xSylvzLGKl31NYk_4LWc_nRcjaJcSO0wGYSYdJUfG6QEIIbK2fMBGB1W8IBLasLuQ"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+              <div class="absolute top-space-md left-space-md flex items-center gap-space-xs">
+                <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-xs">
+                  <span class="text-base leading-none">🇬🇧</span>
+                  <span class="font-label-md text-label-md text-primary font-bold">United Kingdom</span>
+                  <span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+                </div>
+              </div>
+              <div class="absolute top-space-md right-space-md">
+                <span class="px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-label-sm font-semibold tracking-wide uppercase">
+                  Bank Holiday Spectacle
+                </span>
+              </div>
+              <div class="absolute bottom-space-md left-space-md right-space-md text-white">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-container-highest">Calendar Reference</span>
+                <h2 class="font-headline-md text-headline-md font-bold text-white tracking-tight">Notting Hill Carnival (Late August)</h2>
+                <div class="flex items-center gap-space-xs text-surface-container-low font-label-md text-label-md mt-0.5">
+                  <span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                  <span>August Bank Holiday Weekend (London)</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-lg">
+              <div class="flex flex-col gap-space-md">
+                <div class="flex items-center justify-between pb-space-xs">
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Core Cultural Customs</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">4 Essential Practices</span>
+                </div>
+                <div class="flex items-start gap-space-md p-space-sm rounded-xl bg-surface hover:bg-surface-container-low transition-colors">
+                  <div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">public</span>
+                  </div>
+                  <div class="flex flex-col gap-0.5">
+                    <h3 class="font-label-lg text-label-lg text-on-surface font-bold">1. Celebration of British Caribbean Culture</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Europe’s biggest street festival, honouring Caribbean music, dance traditions, and multicultural London heritage since 1966.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-md p-space-sm rounded-xl bg-surface hover:bg-surface-container-low transition-colors">
+                  <div class="w-10 h-10 rounded-xl bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">theater_comedy</span>
+                  </div>
+                  <div class="flex flex-col gap-0.5">
+                    <h3 class="font-label-lg text-label-lg text-on-surface font-bold">2. Masquerade &amp; Costumes (‘Mas’)</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Dancers parade in breathtaking bespoke costumes with enormous plumes of dyed feathers, sparkling gems, and glittering wings.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-md p-space-sm rounded-xl bg-surface hover:bg-surface-container-low transition-colors">
+                  <div class="w-10 h-10 rounded-xl bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">speaker</span>
+                  </div>
+                  <div class="flex flex-col gap-0.5">
+                    <h3 class="font-label-lg text-label-lg text-on-surface font-bold">3. Sound Systems &amp; Steel Pan Bands</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Towering stationary street sound systems blast reggae, soca, and calypso rhythms while hundreds of thousands dance freely.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-md p-space-sm rounded-xl bg-surface hover:bg-surface-container-low transition-colors">
+                  <div class="w-10 h-10 rounded-xl bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">restaurant</span>
+                  </div>
+                  <div class="flex flex-col gap-0.5">
+                    <h3 class="font-label-lg text-label-lg text-on-surface font-bold">4. Street Food Delights</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Lively stalls serve authentic Jamaican jerk chicken, fried sweet plantains, warm meat patties, and fresh coconut water.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tradition Spotlight Box -->
+              <div class="mt-space-sm p-space-md rounded-xl bg-surface-container-low">
+                <div class="flex items-center justify-between mb-space-xs">
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-tertiary-container text-[18px]">auto_stories</span>
+                    <span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-primary">Tradition Spotlight &amp; Folklore</span>
+                  </div>
+                  <span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded-full font-semibold">British Custom</span>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                  <div class="p-2.5 rounded-lg bg-surface-container-lowest">
+                    <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-0.5">The Caribbean Beat of London</span>
+                    <p class="font-body-md text-body-md text-primary font-medium italic">
+                      “Every August Bank Holiday, West London transforms into an explosion of iridescent plumage, pulsing calypso rhythms, and mouthwatering Caribbean cuisine.”
+                    </p>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-surface-container-lowest flex items-start gap-2">
+                    <span class="material-symbols-outlined text-tertiary-container text-[20px] shrink-0 mt-0.5">speaker</span>
+                    <div class="flex flex-col">
+                      <span class="font-label-md text-label-md text-on-surface font-bold">Living Tradition: Sound Systems &amp; 'Mas'</span>
+                      <span class="font-body-md text-body-md text-on-surface-variant">Introduced to the UK by Caribbean immigrants, mobile street sound systems and masquerade troupes turn London into Europe's greatest cultural carnival.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Comparative Infographic Callout -->
+        <div class="w-full bg-surface-container rounded-2xl p-space-lg mb-space-xl border border-surface-container-high">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-center">
+            <div class="flex flex-col gap-1">
+              <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Comparative Metric</span>
+              <h3 class="font-headline-sm text-headline-sm text-primary">Scale &amp; Public Participation</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Comparing decentralized domestic gatherings across an entire continent versus Europe’s densest single-neighborhood street party.
+              </p>
+            </div>
+            <div class="flex items-center gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-xs">
+              <div class="w-14 h-14 shrink-0">
+                <svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
+                  <path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+                  <path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="84, 100" stroke-width="4"></path>
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-headline-sm text-headline-sm text-on-surface font-bold">84%</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant">US citizens attending 4th July cookouts / parades</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-xs">
+              <div class="w-14 h-14 shrink-0">
+                <svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
+                  <path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+                  <path class="text-tertiary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="68, 100" stroke-width="4"></path>
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-headline-sm text-headline-sm text-on-surface font-bold">2.0M+</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Annual Carnival visitors dancing in West London</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comparative Analysis & Useful Phrases -->
+        <div class="w-full bg-surface-container-lowest rounded-2xl p-space-lg lg:p-space-xl shadow-sm border border-slate-100">
+          <div class="flex flex-col lg:flex-row gap-gutter lg:gap-gutter-lg">
+            
+            <div class="lg:w-1/2 flex flex-col justify-between gap-space-md">
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md font-bold uppercase tracking-wider">
+                  <span class="material-symbols-outlined text-[20px]">diversity_2</span>
+                  <span>Cultural Synthesis</span>
+                </div>
+                <h2 class="font-headline-md text-headline-md text-primary font-bold">
+                  Community &amp; Togetherness in Summer
+                </h2>
+                <div class="mt-space-sm p-space-md rounded-xl bg-surface-container-low border border-surface-container flex flex-col gap-2">
+                  <p class="font-body-lg text-body-lg text-on-surface font-semibold leading-relaxed">
+                    How do outdoor celebrations bring diverse communities together in summer?
+                  </p>
+                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Both American Fourth of July celebrations and London's Notting Hill Carnival demonstrate the unifying power of outdoor communal food, music, and civic pride—transforming residential streets and parks into welcoming shared festive spaces.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cultural Comparison Highlights -->
+            <div class="lg:w-1/2 flex flex-col gap-space-md bg-surface p-space-lg rounded-xl border border-slate-200">
+              <div class="flex items-center justify-between pb-space-xs">
+                <div class="flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-primary text-[20px]">compare</span>
+                  <span class="font-label-lg text-label-lg text-primary font-bold">Cultural Parallels &amp; Contrasts</span>
+                </div>
+                <span class="font-label-sm text-label-sm bg-surface-container-highest px-2 py-0.5 rounded text-primary font-bold">Festive Insights</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                How summer celebrations reflect transatlantic identity and community:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+                <div class="p-space-sm rounded-lg bg-surface-container-lowest flex flex-col gap-1 transition-transform hover:-translate-y-0.5 shadow-xs border border-slate-100">
+                  <span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Patriotic vs. Multicultural</span>
+                  <span class="font-body-md text-body-md text-on-surface font-semibold">Civic vs. Diaspora Pride</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">The 4th of July marks national sovereignty across 50 states, while Carnival celebrates British Afro-Caribbean heritage in London.</span>
+                </div>
+                <div class="p-space-sm rounded-lg bg-surface-container-lowest flex flex-col gap-1 transition-transform hover:-translate-y-0.5 shadow-xs border border-slate-100">
+                  <span class="font-label-sm text-label-sm text-tertiary-container font-bold uppercase tracking-wider">Scale &amp; Setting</span>
+                  <span class="font-body-md text-body-md text-on-surface font-semibold">Backyards vs. Mega Parade</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">US celebrations are decentralized across suburban gardens, whereas Carnival brings 2+ million people into West London streets.</span>
+                </div>
+                <div class="p-space-sm rounded-lg bg-surface-container-lowest flex flex-col gap-1 transition-transform hover:-translate-y-0.5 shadow-xs border border-slate-100">
+                  <span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Culinary Traditions</span>
+                  <span class="font-body-md text-body-md text-on-surface font-semibold">Barbecue vs. Jerk Spices</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">American grills sizzle with burgers, ribs, and corn; carnival stalls serve Jamaican jerk chicken, plantains, and tropical punch.</span>
+                </div>
+                <div class="p-space-sm rounded-lg bg-surface-container-lowest flex flex-col gap-1 transition-transform hover:-translate-y-0.5 shadow-xs border border-slate-100">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">Visual &amp; Sound Spectacle</span>
+                  <span class="font-body-md text-body-md text-on-surface font-semibold">Fireworks vs. Sound Systems</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">Night skies illuminated by fireworks across America contrast with daytime iridescent masquerade feathers and pulsing calypso bass in the UK.</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+          </div>
+        </div>
+
+        <!-- Bottom Navigation Controls -->
+        <div class="flex items-center justify-between pt-space-lg">
+          <a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-lg text-label-lg transition-colors shadow-xs" data-path="spring" href="#spring">
+            <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+            <span>Previous: Spring Celebrations</span>
+          </a>
+          <div class="hidden sm:flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></span>
+            <span class="w-6 h-2.5 rounded-full bg-primary"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></span>
+          </div>
+          <a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-colors shadow-xs" data-path="autumn" href="#autumn">
+            <span>Next: Autumn Harvests</span>
+            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================== -->
+    <!-- SECTION 5: AUTUMN GATHERINGS TAB (#autumn)                     -->
+    <!-- ============================================================== -->
+    <section id="tab-autumn" class="tab-content w-full">
+      <div class="max-w-7xl mx-auto w-full px-margin lg:px-margin-lg py-space-lg md:py-space-xl flex flex-col gap-space-xl">
+        
+        <!-- Autumn Overview Header -->
+        <header class="flex flex-col gap-space-md">
+          <div class="flex flex-wrap items-center justify-between gap-space-sm">
+            <div class="inline-flex items-center gap-space-xs bg-surface-container-high px-space-md py-1.5 rounded-full">
+              <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+              <span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-bold">Season 4 / 4 • Autumn Gatherings</span>
+            </div>
+            <div class="flex items-center gap-space-sm">
+              <div class="flex items-center gap-1.5 bg-surface-container-low px-3 py-1 rounded-lg">
+                <span class="material-symbols-outlined text-[18px] text-primary">splitscreen</span>
+                <span class="font-label-sm text-label-sm text-primary font-bold">Presentation View</span>
+              </div>
+              <button class="flex items-center gap-1.5 bg-surface-container px-3 py-1 rounded-lg font-label-sm text-label-sm text-on-surface hover:bg-surface-container-highest transition-colors shadow-xs" id="viewToggleBtn">
+                <span class="material-symbols-outlined text-[16px]">visibility</span>
+                <span>Focus: All Cards</span>
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+            <div class="max-w-3xl flex flex-col gap-space-xs">
+              <h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">Autumn Gatherings: Harvest &amp; Bonfires</h1>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">Explore autumn traditions from spooky October nights to grateful November feasts and historical British bonfires.</p>
+            </div>
+            <!-- Autumn Festive Emblems Strip -->
+            <div class="bg-surface-container-lowest p-space-md rounded-xl shadow-xs border border-slate-100 flex flex-col gap-1.5 shrink-0 min-w-[280px]">
+              <div class="flex items-center gap-1.5 text-on-surface-variant">
+                <span class="material-symbols-outlined text-[18px] text-primary">local_fire_department</span>
+                <span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Autumn Festive Lore</span>
+              </div>
+              <div class="flex flex-wrap items-center gap-1.5">
+                <button class="bg-surface-container-high hover:bg-primary hover:text-on-primary transition-colors text-on-surface px-2.5 py-1 rounded-md font-label-md text-label-md" onclick="playPronounce('Harvest Feast', 'A bountiful meal celebrating agricultural abundance, central to American Thanksgiving.')">Harvest Feast</button>
+                <button class="bg-surface-container-high hover:bg-primary hover:text-on-primary transition-colors text-on-surface px-2.5 py-1 rounded-md font-label-md text-label-md" onclick="playPronounce('Gratitude', 'The heartfelt tradition of sharing blessings and expressing thanks during autumn feasts.')">Gratitude</button>
+                <button class="bg-surface-container-high hover:bg-primary hover:text-on-primary transition-colors text-on-surface px-2.5 py-1 rounded-md font-label-md text-label-md" onclick="playPronounce('Jack-o\'-lantern', 'The folklore tradition of carving illuminated pumpkins with glowing faces for Halloween.')">Jack-o'-lantern</button>
+                <button class="bg-surface-container-high hover:bg-primary hover:text-on-primary transition-colors text-on-surface px-2.5 py-1 rounded-md font-label-md text-label-md" onclick="playPronounce('Guy Fawkes Effigy', 'A handmade straw figure burned on community bonfires in the UK on November 5th.')">Guy Effigy</button>
+                <button class="bg-surface-container-high hover:bg-primary hover:text-on-primary transition-colors text-on-surface px-2.5 py-1 rounded-md font-label-md text-label-md" onclick="playPronounce('Bonfire Night', 'The British celebration of Guy Fawkes Night with public fires, sparklers, and fireworks.')">Bonfire Night</button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- 3-Column Comparative Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter lg:gap-gutter-lg items-stretch">
+          
+          <!-- CARD 1: Halloween (US & UK) -->
+          <article class="bg-surface-container-lowest rounded-2xl shadow-sm border border-slate-100 flex flex-col overflow-hidden transition-all duration-300 hover:shadow-md">
+            <div class="relative h-52 w-full overflow-hidden bg-surface-container group">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Carved Halloween jack-o-lanterns with candles and trick-or-treaters" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6fIXSp38RpG956D9ejXZOVg3VQMQQQVRvMoxMliyHKGSYoUUpxUAQ7BCmpLMJeaVPVYNBZT9W_VSxDsa-B_0o9VAInb_Shnjs9dYuqcTabER3sa4nPavbSoNev6xxFGdknyr6ZyPwTIrGHWkcrqhWOi9FE6Wlpo2wep0C8ZQolwiKevnAdJFJeaQPPyCzIao0yr94j5wxdZr-ZMOQYqBFZnQtJ9QFemXn94-JMLI"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                <span class="inline-flex items-center gap-1.5 bg-surface-container-lowest/95 backdrop-blur-md px-3 py-1 rounded-full font-label-md text-label-md text-primary shadow-xs">
+                  <span>🇺🇸</span><span>🇬🇧</span>
+                  <span class="font-bold">US &amp; UK Shared Occasion</span>
+                </span>
+              </div>
+              <div class="absolute bottom-3 left-3 text-white font-label-sm text-label-sm uppercase tracking-widest bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">
+                October 31st
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col flex-1 gap-space-md justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-space-xs pb-space-sm">
+                  <div>
+                    <span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Cosplay &amp; Folklore</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mt-0.5">Halloween</h2>
+                  </div>
+                  <button class="w-9 h-9 rounded-full bg-surface-container-low text-primary flex items-center justify-center hover:bg-surface-container-high transition-colors shrink-0 shadow-xs" onclick="playPronounce('Halloween', 'US / UK: /ˌhæl.əʊˈiːn/')" title="Pronounce">
+                    <span class="material-symbols-outlined text-[20px]">volume_up</span>
+                  </button>
+                </div>
+                <div class="flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md">
+                  <div class="flex items-start gap-space-xs bg-surface-container-low p-2.5 rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">theater_comedy</span>
+                    <div><strong class="text-on-surface">Costumes &amp; Dressing Up:</strong> Children and adults wear imaginative outfits of creatures, heroes, or mythical characters.</div>
+                  </div>
+                  <div class="flex items-start gap-space-xs bg-surface-container-low p-2.5 rounded-lg">
+                    <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">palette</span>
+                    <div><strong class="text-on-surface">Pumpkin Carving:</strong> Families hollow out gourds to fashion candle-lit grinning faces known as <em>Jack-o'-lanterns</em>.</div>
+                  </div>
+                  <div class="flex items-start gap-space-xs bg-surface-container-low p-2.5 rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">cottage</span>
+                    <div><strong class="text-on-surface">Trick-or-Treating:</strong> Youth walk from door to decorated door requesting confectioneries with the phrase <em>"Trick or treat!"</em></div>
+                  </div>
+                  <div class="flex items-start gap-space-xs bg-surface-container-low p-2.5 rounded-lg">
+                    <span class="material-symbols-outlined text-tertiary-container text-[20px] shrink-0 mt-0.5">sports_esports</span>
+                    <div><strong class="text-on-surface">Haunted Games:</strong> Traditional parlor games like bobbing for floating red apples using only teeth.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tradition Highlight Pill -->
+              <div class="bg-surface-container p-3 rounded-xl flex flex-col gap-1 mt-2">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wide">Tradition Highlight</span>
+                  <span class="bg-surface-container-lowest text-primary text-[10px] font-bold px-1.5 py-0.5 rounded">Festive Symbol</span>
+                </div>
+                <div class="font-label-lg text-label-lg text-on-surface font-semibold">Jack-o'-lantern Folklore</div>
+                <p class="font-body-md text-body-md text-on-surface-variant text-[14px] leading-snug">Rooted in ancient Celtic folklore of Stingy Jack, Irish immigrants brought turnip-carving to America, adapting it to native pumpkins that illuminate front porches on Halloween.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2: Thanksgiving (US) -->
+          <article class="bg-surface-container-lowest rounded-2xl shadow-sm border border-slate-100 flex flex-col overflow-hidden transition-all duration-300 hover:shadow-md">
+            <div class="relative h-52 w-full overflow-hidden bg-surface-container group">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="American Thanksgiving turkey dinner table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPPZyuZCCz5jhHZLZP52pp31D9YcK1_XmVfchmY2l0AMeQNbl-vFW7Usordw1WDebCyrWY9txgtjDan8AXKS1dbvSnZHua4gL7Le_-F98NEbHohNtu3DFuwzm6X2HyOPpJ9-5yl4AxiKV2-5P9wH3mnACad26NuuMjWh-M8SHrrjcdQNFEDIHuo0EL9vPMt7mK-218CjxrOhB39yfv1aMSfMz4NvpL49zkXbYPwq8"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                <span class="inline-flex items-center gap-1.5 bg-surface-container-lowest/95 backdrop-blur-md px-3 py-1 rounded-full font-label-md text-label-md text-primary shadow-xs">
+                  <span>🇺🇸</span>
+                  <span class="font-bold">United States Tradition</span>
+                </span>
+              </div>
+              <div class="absolute bottom-3 left-3 text-white font-label-sm text-label-sm uppercase tracking-widest bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">
+                4th Thursday in November
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col flex-1 gap-space-md justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-space-xs pb-space-sm">
+                  <div>
+                    <span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Harvest &amp; Kinship</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mt-0.5">Thanksgiving</h2>
+                  </div>
+                  <button class="w-9 h-9 rounded-full bg-surface-container-low text-primary flex items-center justify-center hover:bg-surface-container-high transition-colors shrink-0 shadow-xs" onclick="playPronounce('Thanksgiving', 'US: /ˈθæŋksˌɡɪv.ɪŋ/')" title="Pronounce">
+                    <span class="material-symbols-outlined text-[20px]">volume_up</span>
+                  </button>
+                </div>
+                <div class="flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md">
+                  <div class="flex items-start gap-space-xs bg-surface-container-low p-2.5 rounded-lg">
+                    <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">restaurant</span>
+                    <div><strong class="text-on-surface">The Big Family Feast:</strong> Succulent roast turkey with aromatic herb stuffing, cranberry sauce, buttery potatoes, and pumpkin pie.</div>
+                  </div>
+                  <div class="flex items-start gap-space-xs bg-surface-container-low p-2.5 rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">favorite</span>
+                    <div><strong class="text-on-surface">Expressing Gratitude:</strong> Relatives take turns speaking aloud what personal blessings and fortunes they cherish over the prior year.</div>
+                  </div>
+                  <div class="flex items-start gap-space-xs bg-surface-container-low p-2.5 rounded-lg">
+                    <span class="material-symbols-outlined text-tertiary-container text-[20px] shrink-0 mt-0.5">celebration</span>
+                    <div><strong class="text-on-surface">Macy's Parade:</strong> Gigantic helium character balloons navigate Manhattan avenues viewed by over 50 million people nationwide.</div>
+                  </div>
+                  <div class="flex items-start gap-space-xs bg-surface-container-low p-2.5 rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">sports_football</span>
+                    <div><strong class="text-on-surface">NFL Football Games:</strong> Multi-generational households assemble in living rooms to watch afternoon gridiron games.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tradition Highlight Pill -->
+              <div class="bg-surface-container p-3 rounded-xl flex flex-col gap-1 mt-2">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wide">Tradition Highlight</span>
+                  <span class="bg-surface-container-lowest text-primary text-[10px] font-bold px-1.5 py-0.5 rounded">Festive Symbol</span>
+                </div>
+                <div class="font-label-lg text-label-lg text-on-surface font-semibold">The Thanksgiving Feast &amp; Gratitude</div>
+                <p class="font-body-md text-body-md text-on-surface-variant text-[14px] leading-snug">Commemorating the 1621 harvest shared between Pilgrims and the Wampanoag tribe, families gather across America to express heartfelt gratitude over roast turkey and pumpkin pie.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 3: Guy Fawkes Night (UK) -->
+          <article class="bg-surface-container-lowest rounded-2xl shadow-sm border border-slate-100 flex flex-col overflow-hidden transition-all duration-300 hover:shadow-md">
+            <div class="relative h-52 w-full overflow-hidden bg-surface-container group">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Towering Guy Fawkes bonfire in Britain with sparklers and fireworks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4tYlBUqNxi4MhSAbYB0AxFupAQpo56gc5SNCGaLBAkV9Sx955JXzpaSQgKd8IMiKxf9q2VASnmUAFH7YCDXBFEIkDvOPzSc-TypB8U2vOSGI4t-ts4UoL2YHuYiZm0p1dLTZh_8PFZTiI90XmZass1fzcUQPf5I6oTO2BNwtyg15gc3EiMNp9PHNm-9jUJW9lTtv4LOC1QltRK7LsOGXCiyBJtitIJUfWhQGdnNE"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                <span class="inline-flex items-center gap-1.5 bg-surface-container-lowest/95 backdrop-blur-md px-3 py-1 rounded-full font-label-md text-label-md text-primary shadow-xs">
+                  <span>🇬🇧</span>
+                  <span class="font-bold">United Kingdom Tradition</span>
+                </span>
+              </div>
+              <div class="absolute bottom-3 left-3 text-white font-label-sm text-label-sm uppercase tracking-widest bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">
+                November 5th
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col flex-1 gap-space-md justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-space-xs pb-space-sm">
+                  <div>
+                    <span class="font-label-sm text-label-sm text-tertiary-container uppercase font-bold tracking-wider">History &amp; Pyrotechnics</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mt-0.5">Guy Fawkes Night</h2>
+                  </div>
+                  <button class="w-9 h-9 rounded-full bg-surface-container-low text-primary flex items-center justify-center hover:bg-surface-container-high transition-colors shrink-0 shadow-xs" onclick="playPronounce('Guy Fawkes Night', 'UK: /ˌɡaɪ ˈfɔːks ˌnaɪt/')" title="Pronounce">
+                    <span class="material-symbols-outlined text-[20px]">volume_up</span>
+                  </button>
+                </div>
+                <div class="flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md">
+                  <div class="flex items-start gap-space-xs bg-surface-container-low p-2.5 rounded-lg">
+                    <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">history_edu</span>
+                    <div><strong class="text-on-surface">The 1605 Plot:</strong> Commemorates the thwarted Gunpowder Plot conspiracy against King James I and Parliament in London.</div>
+                  </div>
+                  <div class="flex items-start gap-space-xs bg-surface-container-low p-2.5 rounded-lg">
+                    <span class="material-symbols-outlined text-secondary-container text-[20px] shrink-0 mt-0.5">local_fire_department</span>
+                    <div><strong class="text-on-surface">Bonfires &amp; Straw Guys:</strong> Parishes erect vast wooden pyres, burning handmade straw effigies representing Guy Fawkes.</div>
+                  </div>
+                  <div class="flex items-start gap-space-xs bg-surface-container-low p-2.5 rounded-lg">
+                    <span class="material-symbols-outlined text-tertiary-container text-[20px] shrink-0 mt-0.5">flare</span>
+                    <div><strong class="text-on-surface">Fireworks &amp; Sparklers:</strong> Crowds assemble for luminous sky displays while young children twirl sparkling hand-rods safely.</div>
+                  </div>
+                  <div class="flex items-start gap-space-xs bg-surface-container-low p-2.5 rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">bakery_dining</span>
+                    <div><strong class="text-on-surface">Hearty Autumn Fare:</strong> Steaming foil-wrapped jacket potatoes, toasted marshmallows, and sweet dark ginger parkin cake.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tradition Highlight Pill -->
+              <div class="bg-surface-container p-3 rounded-xl flex flex-col gap-1 mt-2">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wide">Tradition Highlight</span>
+                  <span class="bg-surface-container-lowest text-primary text-[10px] font-bold px-1.5 py-0.5 rounded">Festive Symbol</span>
+                </div>
+                <div class="font-label-lg text-label-lg text-on-surface font-semibold">Bonfire Night &amp; The 1605 Plot</div>
+                <p class="font-body-md text-body-md text-on-surface-variant text-[14px] leading-snug">Remembering the thwarted plot by Guy Fawkes to blow up Parliament; Britons light towering outdoor fires, burn straw effigies, and enjoy baked jacket potatoes and ginger parkin.</p>
+              </div>
+            </div>
+          </article>
+
+        </section>
+
+        <!-- Comparative Synthesis Section -->
+        <section class="bg-surface-container-lowest rounded-2xl shadow-sm border border-slate-100 p-space-lg lg:p-space-xl flex flex-col gap-space-lg">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+            <div>
+              <div class="flex items-center gap-1.5 text-secondary">
+                <span class="material-symbols-outlined text-[20px]">table_chart</span>
+                <span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Comparative Cultural Matrix</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-primary mt-1 font-bold">Cross-Cultural Matrix: Autumn Traditions</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Comparative Scope:</span>
+              <span class="bg-surface-container text-primary font-label-md text-label-md px-2.5 py-1 rounded font-bold">US &amp; UK Festive Heritage</span>
+            </div>
+          </div>
+
+          <!-- Comparison Matrix Table -->
+          <div class="w-full overflow-x-auto rounded-xl border border-slate-100">
+            <table class="w-full text-left font-body-md text-body-md border-collapse">
+              <thead>
+                <tr class="bg-surface-container-low text-on-surface">
+                  <th class="p-3.5 font-label-lg text-label-lg font-bold">Comparative Criterion</th>
+                  <th class="p-3.5 font-label-lg text-label-lg font-bold">🎃 Halloween</th>
+                  <th class="p-3.5 font-label-lg text-label-lg font-bold">🦃 Thanksgiving</th>
+                  <th class="p-3.5 font-label-lg text-label-lg font-bold">🎆 Guy Fawkes Night</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-on-surface-variant">
+                <tr class="hover:bg-surface-container-low/50 transition-colors">
+                  <td class="p-3.5 font-semibold text-on-surface bg-surface-container-low/30">Historical Origin</td>
+                  <td class="p-3.5">Ancient Celtic harvest festival (Samhain) blended with All Saints' Day</td>
+                  <td class="p-3.5">1621 harvest meal between Plymouth Pilgrims and Wampanoag people</td>
+                  <td class="p-3.5">1605 thwarted Gunpowder Plot conspiracy against British Parliament</td>
+                </tr>
+                <tr class="bg-surface-container-low/10 hover:bg-surface-container-low/50 transition-colors">
+                  <td class="p-3.5 font-semibold text-on-surface bg-surface-container-low/30">Primary Foods</td>
+                  <td class="p-3.5">Assorted candy sweets, spiced pumpkin pie, caramel toffee apples</td>
+                  <td class="p-3.5">Roast turkey, cranberry relish, sweet potato mash, pumpkin pie</td>
+                  <td class="p-3.5">Jacket baked potatoes, roasted sausages, ginger parkin oatcake</td>
+                </tr>
+                <tr class="hover:bg-surface-container-low/50 transition-colors">
+                  <td class="p-3.5 font-semibold text-on-surface bg-surface-container-low/30">Core Community Activity</td>
+                  <td class="p-3.5">Costume parades, neighborhood trick-or-treating, parlor games</td>
+                  <td class="p-3.5">Large sit-down domestic feasts, thanksgiving speeches, parade watching</td>
+                  <td class="p-3.5">Public bonfires, effigy burning, organized fireworks exhibitions</td>
+                </tr>
+                <tr class="bg-surface-container-low/10 hover:bg-surface-container-low/50 transition-colors">
+                  <td class="p-3.5 font-semibold text-on-surface bg-surface-container-low/30">Cultural Atmosphere / Mood</td>
+                  <td class="p-3.5"><span class="bg-surface-container px-2 py-0.5 rounded text-on-surface text-[14px]">Playful • Mysterious • Spooky</span></td>
+                  <td class="p-3.5"><span class="bg-surface-container px-2 py-0.5 rounded text-on-surface text-[14px]">Reflective • Grateful • Domestic</span></td>
+                  <td class="p-3.5"><span class="bg-surface-container px-2 py-0.5 rounded text-on-surface text-[14px]">Exuberant • Historical • Dramatic</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Festive Traditions Reflection & Insights Module -->
+          <div class="bg-primary text-on-primary p-space-lg rounded-2xl flex flex-col md:flex-row items-center gap-space-lg shadow-sm">
+            <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[32px] text-white">psychology_alt</span>
+            </div>
+            <div class="flex-1 flex flex-col gap-1 text-center md:text-left">
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed font-bold">Cultural Reflection &amp; Discussion</span>
+              <p class="font-headline-sm text-headline-sm font-semibold text-white">
+                "Look back at all four seasons (Winter, Spring, Summer, Autumn). Which holiday traditions reflect the deepest historical roots, and why?"
+              </p>
+              <!-- Historical Angles Frame Card -->
+              <div class="bg-primary-container/80 rounded-xl p-space-sm text-on-primary mt-2 space-y-1.5 border border-primary-fixed/20 text-left">
+                <div class="flex items-center gap-1.5 font-label-sm text-label-sm font-bold text-tertiary-fixed">
+                  <span class="material-symbols-outlined text-[16px]">history_edu</span>
+                  <span>Historical Angles to Explore:</span>
+                </div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold">Ancient Celtic Samhain (Halloween)</span>
+                  <span class="px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold">1621 Plymouth Harvest (Thanksgiving)</span>
+                  <span class="px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold">1605 Gunpowder Plot (Bonfire Night)</span>
+                  <span class="px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold">Victorian Traditions (Crackers &amp; Boxing Day)</span>
+                </div>
+                <p class="font-body-md text-body-md text-surface-container-high text-xs pt-1">
+                  <em>Perspective:</em> While Thanksgiving and Bonfire Night commemorate specific 17th-century historical turning points, Halloween connects back millennia to ancient Celtic harvest rituals, and Christmas reflects centuries of evolving transatlantic folklore.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col items-center gap-space-xs shrink-0 w-full md:w-auto">
+              <button class="w-full md:w-auto bg-white text-primary px-space-md py-2.5 rounded-lg font-label-lg text-label-lg font-bold hover:bg-surface-container-low transition-colors flex items-center justify-center gap-1.5 shadow-sm" onclick="copyPromptText()">
+                <span class="material-symbols-outlined text-[18px]">content_copy</span>
+                <span>Copy Question</span>
+              </button>
+              <button class="w-full md:w-auto bg-surface-container-lowest/20 hover:bg-surface-container-lowest/30 text-white px-space-md py-2 rounded-lg font-label-md text-label-md transition-colors flex items-center justify-center gap-1" onclick="toggleDiscussionDraft()">
+                <span class="material-symbols-outlined text-[18px]">edit_note</span>
+                <span>Write Notes</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Interactive Response Pad / Draft Box -->
+          <div class="hidden flex-col gap-2 p-space-md rounded-xl bg-surface-container-low border border-slate-200" id="discussion-draft-box">
+            <div class="flex items-center justify-between">
+              <span class="font-label-md text-label-md text-primary font-bold">Your Festive Reflections &amp; Notes:</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant" id="draft-status">Ready to record thoughts</span>
+            </div>
+            <textarea class="w-full p-3 rounded-lg bg-surface text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary border border-slate-200" id="discussion-input" placeholder="Record your reflections, comparisons, or favorite holiday traditions from the US and UK here..." rows="3"></textarea>
+            <div class="flex justify-between items-center">
+              <button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" onclick="speak(document.getElementById('discussion-input').value, 'en-US')">
+                <span class="material-symbols-outlined text-[16px] inline-block align-middle mr-1">volume_up</span> Read Aloud
+              </button>
+              <button class="px-4 py-2 bg-secondary text-on-secondary rounded-lg font-label-md text-label-md font-bold shadow-xs active:opacity-90 hover:opacity-95 transition-opacity" onclick="saveDiscussionDraft()">
+                Save Notes
+              </button>
+            </div>
+          </div>
+
+          <!-- Holiday Guide Journey Progress Indicator -->
+          <div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-2 border border-slate-200">
+            <div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+              <span class="font-bold">Holiday Guide Journey</span>
+              <span class="font-bold text-primary">4 of 4 Seasons Explored (100%)</span>
+            </div>
+            <div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden flex shadow-inner">
+              <div class="bg-primary h-full w-1/4"></div>
+              <div class="bg-primary h-full w-1/4 border-l border-surface"></div>
+              <div class="bg-primary h-full w-1/4 border-l border-surface"></div>
+              <div class="bg-tertiary-container h-full w-1/4 border-l border-surface"></div>
+            </div>
+            <div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant font-medium px-0.5">
+              <span>1. Winter ❄️</span>
+              <span>2. Spring 🌸</span>
+              <span>3. Summer ☀️</span>
+              <span class="text-primary font-bold">4. Autumn 🍂</span>
+            </div>
+          </div>
+
+          <!-- Bottom Navigation Controls -->
+          <div class="flex items-center justify-between pt-space-md">
+            <a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-lg text-label-lg transition-colors shadow-xs" data-path="summer" href="#summer">
+              <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+              <span>Previous: Summer Festivals</span>
+            </a>
+            <div class="hidden sm:flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></span>
+              <span class="w-6 h-2.5 rounded-full bg-primary"></span>
+            </div>
+            <a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-colors shadow-xs" data-path="home" href="#home">
+              <span class="material-symbols-outlined text-[20px]">home</span>
+              <span>Return to Home</span>
+            </a>
+          </div>
+
+        </section>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== UNIVERSAL TRADITION POPUP MODAL ==================== -->
+  <div class="fixed inset-0 z-50 bg-on-background/40 backdrop-blur-sm hidden items-center justify-center p-space-md" id="vocab-modal">
+    <div class="w-full max-w-sm bg-surface-container-lowest rounded-2xl shadow-xl p-space-lg flex flex-col gap-space-md border border-slate-100 transition-all transform scale-100 duration-200" id="vocab-card">
+      <div class="flex items-center justify-between">
+        <span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wide font-bold">Festive Tradition &amp; Lore</span>
+        <button class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" onclick="closeDefinition()">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+      <div>
+        <div class="flex flex-col gap-0.5">
+          <div class="flex items-center justify-between">
+            <h4 class="font-headline-sm text-headline-sm text-primary font-bold" id="vocab-term">Tradition</h4>
+            <span class="text-secondary font-label-sm text-label-sm uppercase font-bold" id="vocab-pos">US Custom</span>
+          </div>
+          <span class="text-on-surface-variant font-label-md text-label-md italic" id="vocab-ipa">Holiday Ritual</span>
+        </div>
+        <p class="text-on-surface font-body-md text-body-md mt-2 leading-relaxed bg-surface-container-low p-3 rounded-xl border border-surface-container" id="vocab-meaning">Cultural lore and background appear here.</p>
+      </div>
+      <div class="flex items-center justify-between pt-1">
+        <button class="py-2.5 px-4 bg-primary text-on-primary rounded-lg font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-primary-container shadow-xs transition-colors flex-1" onclick="playSampleWord()">
+          <span class="material-symbols-outlined text-[18px]">volume_up</span>
+          <span>Listen Native Audio</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pronunciation Popover Toast -->
+  <div class="fixed bottom-20 md:bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-surface-container-lowest p-4 rounded-xl shadow-xl flex items-center gap-3 border border-slate-200" id="pronounceToast">
+    <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-xs">
+      <span class="material-symbols-outlined text-[20px]">graphic_eq</span>
+    </div>
+    <div class="flex flex-col">
+      <span class="font-label-lg text-label-lg text-primary font-bold" id="toastWord">Word</span>
+      <span class="font-label-sm text-label-sm text-on-surface-variant" id="toastPhonetic">Phonetic</span>
+    </div>
+  </div>
+
+  <!-- Global Action Toast Feedback -->
+  <div class="fixed bottom-20 md:bottom-8 left-1/2 -translate-x-1/2 z-50 toast-hidden" id="toast-container">
+    <div class="px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-2 shadow-lg">
+      <span class="material-symbols-outlined text-[18px] text-tertiary-fixed" id="toast-icon">check_circle</span>
+      <span id="toast-text">Action completed</span>
+    </div>
+  </div>
+
+  <!-- ==================== MOBILE BOTTOM NAVIGATION BAR (FIXED) ==================== -->
+  <nav class="md:hidden fixed bottom-0 w-full z-50 pb-safe glass-nav-mobile shadow-[0_-2px_12px_rgba(11,28,48,0.06)] border-t border-slate-200/80">
+    <div class="flex items-center justify-around h-16 px-space-xs">
+      <a class="mobile-nav-link flex flex-col items-center justify-center min-w-[56px] h-12 rounded-xl transition-colors text-primary font-bold bg-surface-container-low" data-path="home" href="#home" aria-current="page">
+        <span class="material-symbols-outlined text-[22px]">cottage</span>
+        <span class="font-label-sm text-label-sm mt-0.5">Home</span>
+      </a>
+      <a class="mobile-nav-link flex flex-col items-center justify-center min-w-[56px] h-12 rounded-xl text-on-surface-variant transition-colors" data-path="winter" href="#winter">
+        <span class="material-symbols-outlined text-[22px]">ac_unit</span>
+        <span class="font-label-sm text-label-sm mt-0.5">Winter</span>
+      </a>
+      <a class="mobile-nav-link flex flex-col items-center justify-center min-w-[56px] h-12 rounded-xl text-on-surface-variant transition-colors" data-path="spring" href="#spring">
+        <span class="material-symbols-outlined text-[22px]">psychiatry</span>
+        <span class="font-label-sm text-label-sm mt-0.5">Spring</span>
+      </a>
+      <a class="mobile-nav-link flex flex-col items-center justify-center min-w-[56px] h-12 rounded-xl text-on-surface-variant transition-colors" data-path="summer" href="#summer">
+        <span class="material-symbols-outlined text-[22px]">sunny</span>
+        <span class="font-label-sm text-label-sm mt-0.5">Summer</span>
+      </a>
+      <a class="mobile-nav-link flex flex-col items-center justify-center min-w-[56px] h-12 rounded-xl text-on-surface-variant transition-colors" data-path="autumn" href="#autumn">
+        <span class="material-symbols-outlined text-[22px]">eco</span>
+        <span class="font-label-sm text-label-sm mt-0.5">Autumn</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ==================== DESKTOP & TABLET FOOTER ==================== -->
+  <footer class="w-full bg-surface-container-lowest shadow-[0_-1px_6px_rgba(0,0,0,0.03)] border-t border-slate-100 py-space-xl mt-space-xl">
+    <div class="max-w-7xl mx-auto px-margin lg:px-margin-lg">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter lg:gap-gutter-lg pb-space-lg">
+        <div class="md:col-span-2 flex flex-col gap-space-sm">
+          <div class="flex items-center gap-space-sm">
+            <span class="font-headline-sm text-headline-sm text-primary font-bold">Festive World</span>
+            <span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Cultural Encyclopedia</span>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-lg leading-relaxed">
+            An interactive comparative guide dedicated to discovering and understanding traditional holidays, cultural heritage, and seasonal celebrations across the United States and the United Kingdom.
+          </p>
+          <div class="flex items-center gap-space-md pt-space-xs flex-wrap">
+            <div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+              <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+              <span>US Holiday Traditions</span>
+            </div>
+            <div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+              <span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+              <span>UK Holiday Traditions</span>
+            </div>
+            <div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+              <span class="material-symbols-outlined text-[16px] text-primary">auto_stories</span>
+              <span>Rich Cultural Folklore</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col gap-space-xs">
+          <span class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider mb-space-xs">Seasonal Guides</span>
+          <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="winter" href="#winter">Winter Holidays (Christmas &amp; Boxing Day)</a>
+          <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="spring" href="#spring">Spring Traditions (St. Patrick's &amp; Easter)</a>
+          <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="summer" href="#summer">Summer Festivals (4th of July &amp; Carnival)</a>
+          <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="autumn" href="#autumn">Autumn Gatherings (Halloween, Thanksgiving &amp; Bonfire)</a>
+        </div>
+
+        <div class="flex flex-col gap-space-xs">
+          <span class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider mb-space-xs">Features &amp; Media</span>
+          <div class="flex items-start gap-space-xs text-on-surface-variant">
+            <span class="material-symbols-outlined text-[18px] text-primary shrink-0">table_chart</span>
+            <span class="font-body-md text-body-md">Comparative Cultural Matrices</span>
+          </div>
+          <div class="flex items-start gap-space-xs text-on-surface-variant">
+            <span class="material-symbols-outlined text-[18px] text-primary shrink-0">volume_up</span>
+            <span class="font-body-md text-body-md">Authentic Native Voice Audio</span>
+          </div>
+          <div class="flex items-start gap-space-xs text-on-surface-variant">
+            <span class="material-symbols-outlined text-[18px] text-primary shrink-0">splitscreen</span>
+            <span class="font-body-md text-body-md">Interactive Venn &amp; Grid Views</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-space-md border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+        <p>&copy; Festive World. Transatlantic Holiday Traditions &amp; Cultural Guide.</p>
+        <p>A Comprehensive Exploration of American &amp; British Festive Heritage Across the Year.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>
